@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<p>
+<h3>Try out below:</h3>
+</p>
+<ul>
+<li><b>Endpoints:</b>
+    <table style="border: 1px solid black">
+        <tr><th>Type</th><th>Type</th><th>Description</th></tr>
+        <tr><td>/indicators/<span style="color:grey">&lt;type&gt;</span></td> <td>WEB DATA FETCH SERVICE</td><td>Fetch indicators data by type</td></tr>
+        <tr><td>/data/<span style="color:grey">&lt;filter&gt;</span>/<span style="color:grey">&lt;tickers&gt;</span></td> <td>WEB DATA FETCH SERVICE</td><td>Fetch data from yahoo finance y type, e.g quote/fin/bs/cf</td></tr>
+        <tr><td>/data/cik/<span style="color:grey">&lt;ticker&gt;</span></td> <td>WEB DATA FETCH SERVICE</td><td>Fetch CIK number from SEC website by ticker</td></tr>
+        <tr><td>/csv/<span style="color:grey">&lt;type&gt;</span></td> <td>LOCAL DATA FETCH SERVICE</td><td>Get data from the csv file</td></tr>
+        <tr><td>/data/get/<span style="color:grey">&lt;parent&gt;</span>/<span style="color:grey">&lt;subsector&gt;</span>/<span style="color:grey">&lt;ticker&gt;</span>/<span style="color:grey">&lt;type&gt;</span></td> <td>LOCAL DATA FETCH SERVICE</td><td>Get local data by ticker and type</td></tr>
+        <tr><td>/data/getSectors</td> <td>LOCAL DATA FETCH SERVICE</td><td>Get local data files and folders</td></tr>
+         <tr><td>/data/metadata/stocks/<span style="color:grey">&lt;country&gt;</span>/<span style="color:grey">&lt;parent&gt;</span>/<span style="color:grey">&lt;category&gt;</span></td> <td>LOCAL DATA FETCH SERVICE</td><td>Get tickers metadata by parent (All to get all subsector) and subsector (All to get all for parent)</td></tr>
+       <tr><td>/data/getSubSectors/<span style="color:grey">&lt;parent&gt;</span></td> <td>LOCAL DATA FETCH SERVICE</td><td>Get sub sector list by parent sector</td></tr>
+        <tr><td>/data/sync/dump/<span style="color:grey">&lt;parent&gt;</span>/<span style="color:grey">&lt;subsector&gt;</span>/<span style="color:grey">&lt;ticker&gt;</span>/<span style="color:grey">&lt;type&gt;</span></td> <td>DATA SYNC SERVICE</td><td>Syncing (Dump) by ticker and type</td></tr>
+        <tr><td>/data/sync/update/<span style="color:grey">&lt;parent&gt;</span>/<span style="color:grey">&lt;subsector&gt;</span>/<span style="color:grey">&lt;ticker&gt;</span>/<span style="color:grey">&lt;type&gt;</span></td> <td>DATA SYNC SERVICE</td><td>Syncing (update) by ticker and type</td></tr>
+        <tr><td>/data/sync/sector/<span style="color:grey">&lt;parent&gt;</span>/<span style="color:grey">&lt;subsector&gt;</span>/<span style="color:grey">&lt;type&gt;</span></td> <td>DATA SYNC SERVICE</td><td>Syncing (Dump & update) by sub sector</td></tr>
+        <tr><td>/data/sync/indicators/<span style="color:grey">&lt;parent&gt;</span>/<span style="color:grey">&lt;subsector&gt;</span>/<span style="color:grey">&lt;type&gt;</span></span></td> <td>DATA SYNC SERVICE</td><td>Syncing (Dump & update) indicators data</td></tr>
+    </table>
+</li>
+</ul>
+<ul>
+<li><b>Indicators (/indicators/<u>Type</u>):</b>
+    <table style="border: 1px solid black">
+        <tr><th>Type</th><th>Description</th></tr>
+        <tr><td>cci</td> <td>Consumer confidence index</td></tr>
+        <tr><td>jobless</td></td><td> US Unemployment rate</td></tr>
+        <tr><td>pe</td><td> SP500 price to earnings ratio</td></tr>
+        <tr><td>dtrlarindex</td><td> Trade weighted us dollar index broad goods and services</td></tr>
+        <tr><td>inflation</td><td> US Inflation rate</td></tr>
+        <tr><td>putcall</td><td> Cboe Equity Put/Call Ratio</td></tr>
+        <tr><td>manufacturing</td><td> US ISM Manufacturing PMI</td></tr>
+        <tr><td>margin</td><td> Margin debt</td></tr>
+        <tr><td>yield</td><td> Yield curve data</td></tr>
+    </table>
+</li>
+</ul>
+<ul>
+<li><b>SEC Fillings</b></li>
+    <table style="border: 1px solid black">
+        <tr><th>Form</th><th>Type</th><th style="text-align:left">Explanation</th></tr>
+        <tr><td><u>S1:</u> </td><td style="color:red">Bad</td><td>Offering coming, company selling shares</td></tr>
+        <tr><td><u>S3:</u> </td><td style="color:red"></td><td>Lets holders of offerings sell shares, not the company selling</td></tr>
+        <tr><td><u>8K:</u> </td><td style="color:red"></td><td>Any press releases a company does they then issue 8k before or after</td></tr>
+        <tr><td><u>10K:</u> </td><td style="color:red"></td><td>Annual company reports</td></tr>
+        <tr><td><u>10Q:</u> </td><td style="color:red"></td><td>Quaterly company reports</td></tr>
+        <tr><td><u>Form 4:</u> </td><td style="color:red"></td><td>Insider buy/sell or option grants</td></tr>
+        <tr><td><u>13F:</u> </td><td style="color:green"></td><td>Quaterly fillings required by all institutional investment managers with over 100 million in qualifying assets</td></tr>
+        <tr><td><u>13D:</u> </td><td style="color:red">Active</td><td>How much a large share holder owns in a stock, if more than 5% of voting class shares, or if more than 20% no matter voting or non-voting</td></tr>
+        <tr><td><u>13G:</u> </td><td style="color:green">Passive</td><td>Filed when an investment firm acquires a beneficial ownership of 5% or more of non-voting class shares</td></tr>
+    </table>
+</ul>
+</body>
+</html>

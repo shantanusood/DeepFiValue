@@ -19,6 +19,8 @@ class Indicators:
             return "https://ycharts.com/indicators/us_unemployment_rate"
         elif self.type == "pe":
             return "https://ycharts.com/indicators/sp_500_pe_ratio"
+        elif self.type == "cape":
+            return "https://ycharts.com/indicators/cyclically_adjusted_pe_ratio"
         elif self.type == "dollarindex":
             return "https://ycharts.com/indicators/trade_weighted_us_dollar_index_broad_goods_and_services"
         elif self.type == "inflation":
@@ -27,7 +29,9 @@ class Indicators:
             return "https://ycharts.com/indicators/cboe_equity_put_call_ratio"
         elif self.type == "manufacturing":
             return "https://ycharts.com/indicators/us_pmi"
+        elif self.type == "margin":
+            return "https://ycharts.com/indicators/finra_margin_debt"
 
     def scrapperSelector(self):
-        if self.type == "cci" or self.type == "jobless" or self.type == "pe" or self.type == "dollarindex" or self.type == "inflation" or self.type == "putcall" or self.type == "manufacturing":
+        if self.type == "cci" or self.type == "jobless" or self.type == "pe" or self.type == "dollarindex" or self.type == "inflation" or self.type == "putcall" or self.type == "manufacturing" or self.type == "margin" or self.type == "cape":
             return "div[class='page-body'] > div > div:nth-child(1) > div:nth-child(4) > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > table"

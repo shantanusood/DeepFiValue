@@ -1,0 +1,70 @@
+[
+  {
+    "BRID": {
+      "quote": {
+        "03/20/2021": {
+          "value": "15.20",
+          "Market Cap": "137.968M",
+          "Beta (5Y Monthly)": "0.01",
+          "PE Ratio (TTM)": "19.92",
+          "EPS (TTM)": "0.76",
+          "Earnings Date": "May 29, 2020",
+          "Forward Dividend & Yield": "N/A (N/A)",
+          "Ex-Dividend Date": "Nov 23, 2012",
+          "1y Target Est": "N/A"
+        }
+      }
+    }
+  },
+  {
+    "BRFS": {
+      "quote": {
+        "03/20/2021": {
+          "value": "4.6700",
+          "Market Cap": "3.725B",
+          "Beta (5Y Monthly)": "1.20",
+          "PE Ratio (TTM)": "N/A",
+          "EPS (TTM)": "-1.0250",
+          "Earnings Date": "N/A",
+          "Forward Dividend & Yield": "N/A (N/A)",
+          "Ex-Dividend Date": "Jul 13, 2016",
+          "1y Target Est": "5.58"
+        }
+      }
+    }
+  },
+  {
+    "HRL": {
+      "quote": {
+        "03/20/2021": {
+          "value": "47.97",
+          "Market Cap": "25.911B",
+          "Beta (5Y Monthly)": "-0.05",
+          "PE Ratio (TTM)": "29.61",
+          "EPS (TTM)": "1.62",
+          "Earnings Date": "May 19, 2021 - May 24, 2021",
+          "Forward Dividend & Yield": "0.98 (2.04%)",
+          "Ex-Dividend Date": "Jan 08, 2021",
+          "1y Target Est": "45.75"
+        }
+      }
+    }
+  },
+  {
+    "TSN": {
+      "quote": {
+        "03/20/2021": {
+          "value": "76.75",
+          "Market Cap": "27.993B",
+          "Beta (5Y Monthly)": "0.81",
+          "PE Ratio (TTM)": "13.85",
+          "EPS (TTM)": "5.54",
+          "Earnings Date": "May 03, 2021 - May 07, 2021",
+          "Forward Dividend & Yield": "1.78 (2.32%)",
+          "Ex-Dividend Date": "May 28, 2021",
+          "1y Target Est": "76.88"
+        }
+      }
+    }
+  }
+]

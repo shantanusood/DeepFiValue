@@ -1,0 +1,784 @@
+[
+  {
+    "ABX": {
+      "quote": {
+        "03/20/2021": {
+          "value": "",
+          "Net Assets": "N/A",
+          "Beta (5Y Monthly)": "N/A",
+          "Yield": "N/A",
+          "5y Average Return": "N/A",
+          "Holdings Turnover": "N/A",
+          "Last Dividend": "N/A",
+          "Average for Category": "N/A",
+          "Inception Date": "N/A"
+        }
+      }
+    }
+  },
+  {
+    "AEM": {
+      "quote": {
+        "03/20/2021": {
+          "value": "60.64",
+          "Market Cap": "14.762B",
+          "Beta (5Y Monthly)": "0.72",
+          "PE Ratio (TTM)": "28.88",
+          "EPS (TTM)": "2.10",
+          "Earnings Date": "Feb 08, 2017 - Feb 13, 2017",
+          "Forward Dividend & Yield": "1.40 (2.31%)",
+          "Ex-Dividend Date": "Feb 26, 2021",
+          "1y Target Est": "86.01"
+        }
+      }
+    }
+  },
+  {
+    "AUY": {
+      "quote": {
+        "03/20/2021": {
+          "value": "4.5700",
+          "Market Cap": "4.437B",
+          "Beta (5Y Monthly)": "1.59",
+          "PE Ratio (TTM)": "21.76",
+          "EPS (TTM)": "0.2100",
+          "Earnings Date": "N/A",
+          "Forward Dividend & Yield": "0.07 (1.59%)",
+          "Ex-Dividend Date": "Dec 30, 2020",
+          "1y Target Est": "3.92"
+        }
+      }
+    }
+  },
+  {
+    "AU": {
+      "quote": {
+        "03/20/2021": {
+          "value": "21.96",
+          "Market Cap": "9.155B",
+          "Beta (5Y Monthly)": "0.23",
+          "PE Ratio (TTM)": "9.69",
+          "EPS (TTM)": "2.27",
+          "Earnings Date": "N/A",
+          "Forward Dividend & Yield": "0.48 (2.19%)",
+          "Ex-Dividend Date": "Mar 11, 2021",
+          "1y Target Est": "26.95"
+        }
+      }
+    }
+  },
+  {
+    "AGI": {
+      "quote": {
+        "03/20/2021": {
+          "value": "8.26",
+          "Market Cap": "3.254B",
+          "Beta (5Y Monthly)": "1.18",
+          "PE Ratio (TTM)": "22.45",
+          "EPS (TTM)": "0.37",
+          "Earnings Date": "N/A",
+          "Forward Dividend & Yield": "0.10 (1.21%)",
+          "Ex-Dividend Date": "Mar 16, 2021",
+          "1y Target Est": "8.82"
+        }
+      }
+    }
+  },
+  {
+    "AAU": {
+      "quote": {
+        "03/20/2021": {
+          "value": "0.6130",
+          "Market Cap": "82.37M",
+          "Beta (5Y Monthly)": "1.40",
+          "PE Ratio (TTM)": "N/A",
+          "EPS (TTM)": "-0.0300",
+          "Earnings Date": "N/A",
+          "Forward Dividend & Yield": "N/A (N/A)",
+          "Ex-Dividend Date": "N/A",
+          "1y Target Est": "N/A"
+        }
+      }
+    }
+  },
+  {
+    "BAA": {
+      "quote": {
+        "03/20/2021": {
+          "value": "",
+          "Net Assets": "N/A",
+          "Beta (5Y Monthly)": "N/A",
+          "Yield": "N/A",
+          "5y Average Return": "N/A",
+          "Holdings Turnover": "N/A",
+          "Last Dividend": "N/A",
+          "Average for Category": "N/A",
+          "Inception Date": "N/A"
+        }
+      }
+    }
+  },
+  {
+    "BTG": {
+      "quote": {
+        "03/20/2021": {
+          "value": "4.6800",
+          "Market Cap": "4.933B",
+          "Beta (5Y Monthly)": "1.20",
+          "PE Ratio (TTM)": "7.93",
+          "EPS (TTM)": "0.5900",
+          "Earnings Date": "N/A",
+          "Forward Dividend & Yield": "0.16 (3.42%)",
+          "Ex-Dividend Date": "Mar 05, 2021",
+          "1y Target Est": "3.50"
+        }
+      }
+    }
+  },
+  {
+    "NEM": {
+      "quote": {
+        "03/20/2021": {
+          "value": "61.93",
+          "Market Cap": "49.613B",
+          "Beta (5Y Monthly)": "0.23",
+          "PE Ratio (TTM)": "17.63",
+          "EPS (TTM)": "3.51",
+          "Earnings Date": "May 03, 2021 - May 07, 2021",
+          "Forward Dividend & Yield": "2.20 (3.55%)",
+          "Ex-Dividend Date": "Mar 03, 2021",
+          "1y Target Est": "73.47"
+        }
+      }
+    }
+  },
+  {
+    "EGO": {
+      "quote": {
+        "03/20/2021": {
+          "value": "12.00",
+          "Market Cap": "2.118B",
+          "Beta (5Y Monthly)": "1.55",
+          "PE Ratio (TTM)": "20.00",
+          "EPS (TTM)": "0.60",
+          "Earnings Date": "N/A",
+          "Forward Dividend & Yield": "N/A (N/A)",
+          "Ex-Dividend Date": "Mar 03, 2017",
+          "1y Target Est": "1.83"
+        }
+      }
+    }
+  },
+  {
+    "HMY": {
+      "quote": {
+        "03/20/2021": {
+          "value": "4.5400",
+          "Market Cap": "2.717B",
+          "Beta (5Y Monthly)": "0.85",
+          "PE Ratio (TTM)": "N/A",
+          "EPS (TTM)": "-0.7410",
+          "Earnings Date": "N/A",
+          "Forward Dividend & Yield": "0.07 (1.62%)",
+          "Ex-Dividend Date": "Apr 15, 2021",
+          "1y Target Est": "3.90"
+        }
+      }
+    }
+  },
+  {
+    "KGC": {
+      "quote": {
+        "03/20/2021": {
+          "value": "6.92",
+          "Market Cap": "8.762B",
+          "Beta (5Y Monthly)": "1.03",
+          "PE Ratio (TTM)": "6.53",
+          "EPS (TTM)": "1.06",
+          "Earnings Date": "N/A",
+          "Forward Dividend & Yield": "0.12 (1.75%)",
+          "Ex-Dividend Date": "Mar 02, 2021",
+          "1y Target Est": "11.68"
+        }
+      }
+    }
+  },
+  {
+    "IAG": {
+      "quote": {
+        "03/20/2021": {
+          "value": "3.2600",
+          "Market Cap": "1.556B",
+          "Beta (5Y Monthly)": "0.99",
+          "PE Ratio (TTM)": "36.63",
+          "EPS (TTM)": "0.0890",
+          "Earnings Date": "N/A",
+          "Forward Dividend & Yield": "N/A (N/A)",
+          "Ex-Dividend Date": "Jul 01, 2013",
+          "1y Target Est": "7.65"
+        }
+      }
+    }
+  },
+  {
+    "GORO": {
+      "quote": {
+        "03/20/2021": {
+          "value": "2.8700",
+          "Market Cap": "213.64M",
+          "Beta (5Y Monthly)": "1.93",
+          "PE Ratio (TTM)": "46.29",
+          "EPS (TTM)": "0.0620",
+          "Earnings Date": "Feb 25, 2021",
+          "Forward Dividend & Yield": "0.04 (1.39%)",
+          "Ex-Dividend Date": "Mar 10, 2021",
+          "1y Target Est": "5.25"
+        }
+      }
+    }
+  },
+  {
+    "FNV": {
+      "quote": {
+        "03/20/2021": {
+          "value": "124.33",
+          "Market Cap": "23.948B",
+          "Beta (5Y Monthly)": "0.43",
+          "PE Ratio (TTM)": "72.71",
+          "EPS (TTM)": "1.71",
+          "Earnings Date": "N/A",
+          "Forward Dividend & Yield": "1.20 (0.97%)",
+          "Ex-Dividend Date": "Mar 10, 2021",
+          "1y Target Est": "81.27"
+        }
+      }
+    }
+  },
+  {
+    "LODE": {
+      "quote": {
+        "03/20/2021": {
+          "value": "5.52",
+          "Market Cap": "234.354M",
+          "Beta (5Y Monthly)": "1.87",
+          "PE Ratio (TTM)": "11.29",
+          "EPS (TTM)": "0.49",
+          "Earnings Date": "Mar 11, 2021",
+          "Forward Dividend & Yield": "N/A (N/A)",
+          "Ex-Dividend Date": "N/A",
+          "1y Target Est": "9.25"
+        }
+      }
+    }
+  },
+  {
+    "TRX": {
+      "quote": {
+        "03/20/2021": {
+          "value": "0.6738",
+          "Market Cap": "165.837M",
+          "Beta (5Y Monthly)": "0.95",
+          "PE Ratio (TTM)": "N/A",
+          "EPS (TTM)": "-0.0460",
+          "Earnings Date": "N/A",
+          "Forward Dividend & Yield": "N/A (N/A)",
+          "Ex-Dividend Date": "N/A",
+          "1y Target Est": "N/A"
+        }
+      }
+    }
+  },
+  {
+    "GSV": {
+      "quote": {
+        "03/20/2021": {
+          "value": "0.6686",
+          "Market Cap": "228.888M",
+          "Beta (5Y Monthly)": "0.79",
+          "PE Ratio (TTM)": "N/A",
+          "EPS (TTM)": "-0.0330",
+          "Earnings Date": "N/A",
+          "Forward Dividend & Yield": "N/A (N/A)",
+          "Ex-Dividend Date": "N/A",
+          "1y Target Est": "1.81"
+        }
+      }
+    }
+  },
+  {
+    "VGZ": {
+      "quote": {
+        "03/20/2021": {
+          "value": "0.9910",
+          "Market Cap": "102.865M",
+          "Beta (5Y Monthly)": "1.24",
+          "PE Ratio (TTM)": "247.75",
+          "EPS (TTM)": "0.0040",
+          "Earnings Date": "Mar 01, 2021",
+          "Forward Dividend & Yield": "N/A (N/A)",
+          "Ex-Dividend Date": "N/A",
+          "1y Target Est": "2.50"
+        }
+      }
+    }
+  },
+  {
+    "DRD": {
+      "quote": {
+        "03/20/2021": {
+          "value": "9.86",
+          "Market Cap": "850.149M",
+          "Beta (5Y Monthly)": "1.39",
+          "PE Ratio (TTM)": "896.36",
+          "EPS (TTM)": "0.01",
+          "Earnings Date": "N/A",
+          "Forward Dividend & Yield": "0.52 (5.23%)",
+          "Ex-Dividend Date": "Mar 04, 2021",
+          "1y Target Est": "19.00"
+        }
+      }
+    }
+  },
+  {
+    "XPL": {
+      "quote": {
+        "03/20/2021": {
+          "value": "0.9200",
+          "Market Cap": "53.709M",
+          "Beta (5Y Monthly)": "1.72",
+          "PE Ratio (TTM)": "N/A",
+          "EPS (TTM)": "-0.0160",
+          "Earnings Date": "N/A",
+          "Forward Dividend & Yield": "N/A (N/A)",
+          "Ex-Dividend Date": "N/A",
+          "1y Target Est": "0.90"
+        }
+      }
+    }
+  },
+  {
+    "MYNG": {
+      "quote": {
+        "03/20/2021": {
+          "value": "",
+          "Net Assets": "N/A",
+          "Beta (5Y Monthly)": "N/A",
+          "Yield": "N/A",
+          "5y Average Return": "N/A",
+          "Holdings Turnover": "N/A",
+          "Last Dividend": "N/A",
+          "Average for Category": "N/A",
+          "Inception Date": "N/A"
+        }
+      }
+    }
+  },
+  {
+    "APLL": {
+      "quote": {
+        "03/20/2021": {
+          "value": "",
+          "Net Assets": "N/A",
+          "Beta (5Y Monthly)": "N/A",
+          "Yield": "N/A",
+          "5y Average Return": "N/A",
+          "Holdings Turnover": "N/A",
+          "Last Dividend": "N/A",
+          "Average for Category": "N/A",
+          "Inception Date": "N/A"
+        }
+      }
+    }
+  },
+  {
+    "GFI": {
+      "quote": {
+        "03/20/2021": {
+          "value": "10.04",
+          "Market Cap": "8.699B",
+          "Beta (5Y Monthly)": "0.61",
+          "PE Ratio (TTM)": "12.24",
+          "EPS (TTM)": "0.82",
+          "Earnings Date": "N/A",
+          "Forward Dividend & Yield": "0.31 (3.08%)",
+          "Ex-Dividend Date": "Mar 11, 2021",
+          "1y Target Est": "12.72"
+        }
+      }
+    }
+  },
+  {
+    "RGLD": {
+      "quote": {
+        "03/20/2021": {
+          "value": "105.81",
+          "Market Cap": "6.942B",
+          "Beta (5Y Monthly)": "0.66",
+          "PE Ratio (TTM)": "27.34",
+          "EPS (TTM)": "3.87",
+          "Earnings Date": "May 04, 2021 - May 10, 2021",
+          "Forward Dividend & Yield": "1.20 (1.13%)",
+          "Ex-Dividend Date": "Mar 31, 2021",
+          "1y Target Est": "138.08"
+        }
+      }
+    }
+  },
+  {
+    "NGD": {
+      "quote": {
+        "03/20/2021": {
+          "value": "1.7800",
+          "Market Cap": "1.22B",
+          "Beta (5Y Monthly)": "1.85",
+          "PE Ratio (TTM)": "N/A",
+          "EPS (TTM)": "-0.1200",
+          "Earnings Date": "N/A",
+          "Forward Dividend & Yield": "N/A (N/A)",
+          "Ex-Dividend Date": "N/A",
+          "1y Target Est": "3.81"
+        }
+      }
+    }
+  },
+  {
+    "SA": {
+      "quote": {
+        "03/20/2021": {
+          "value": "18.07",
+          "Market Cap": "1.34B",
+          "Beta (5Y Monthly)": "0.74",
+          "PE Ratio (TTM)": "N/A",
+          "EPS (TTM)": "-0.27",
+          "Earnings Date": "N/A",
+          "Forward Dividend & Yield": "N/A (N/A)",
+          "Ex-Dividend Date": "N/A",
+          "1y Target Est": "48.76"
+        }
+      }
+    }
+  },
+  {
+    "GSS": {
+      "quote": {
+        "03/20/2021": {
+          "value": "3.5000",
+          "Market Cap": "392.077M",
+          "Beta (5Y Monthly)": "0.41",
+          "PE Ratio (TTM)": "N/A",
+          "EPS (TTM)": "-0.4730",
+          "Earnings Date": "N/A",
+          "Forward Dividend & Yield": "N/A (N/A)",
+          "Ex-Dividend Date": "N/A",
+          "1y Target Est": "5.84"
+        }
+      }
+    }
+  },
+  {
+    "SAND": {
+      "quote": {
+        "03/20/2021": {
+          "value": "7.17",
+          "Market Cap": "1.403B",
+          "Beta (5Y Monthly)": "0.99",
+          "PE Ratio (TTM)": "102.43",
+          "EPS (TTM)": "0.07",
+          "Earnings Date": "N/A",
+          "Forward Dividend & Yield": "N/A (N/A)",
+          "Ex-Dividend Date": "N/A",
+          "1y Target Est": "6.35"
+        }
+      }
+    }
+  },
+  {
+    "THMG": {
+      "quote": {
+        "03/20/2021": {
+          "value": "0.1800",
+          "Market Cap": "10.826M",
+          "Beta (5Y Monthly)": "0.23",
+          "PE Ratio (TTM)": "6.43",
+          "EPS (TTM)": "0.0280",
+          "Earnings Date": "Apr 29, 2020",
+          "Forward Dividend & Yield": "N/A (N/A)",
+          "Ex-Dividend Date": "N/A",
+          "1y Target Est": "N/A"
+        }
+      }
+    }
+  },
+  {
+    "SRGZ": {
+      "quote": {
+        "03/20/2021": {
+          "value": "0.0320",
+          "Market Cap": "3.113M",
+          "Beta (5Y Monthly)": "N/A",
+          "PE Ratio (TTM)": "N/A",
+          "EPS (TTM)": "-0.0060",
+          "Earnings Date": "N/A",
+          "Forward Dividend & Yield": "N/A (N/A)",
+          "Ex-Dividend Date": "N/A",
+          "1y Target Est": "N/A"
+        }
+      }
+    }
+  },
+  {
+    "PGOL": {
+      "quote": {
+        "03/20/2021": {
+          "value": "0.1580",
+          "Market Cap": "11.752M",
+          "Beta (5Y Monthly)": "1.15",
+          "PE Ratio (TTM)": "8.32",
+          "EPS (TTM)": "0.0190",
+          "Earnings Date": "N/A",
+          "Forward Dividend & Yield": "N/A (N/A)",
+          "Ex-Dividend Date": "N/A",
+          "1y Target Est": "N/A"
+        }
+      }
+    }
+  },
+  {
+    "GBGD": {
+      "quote": {
+        "03/20/2021": {
+          "value": "0.5500",
+          "Market Cap": "277,906",
+          "Beta (5Y Monthly)": "-0.44",
+          "PE Ratio (TTM)": "N/A",
+          "EPS (TTM)": "-4.3790",
+          "Earnings Date": "N/A",
+          "Forward Dividend & Yield": "N/A (N/A)",
+          "Ex-Dividend Date": "N/A",
+          "1y Target Est": "N/A"
+        }
+      }
+    }
+  },
+  {
+    "GLLA": {
+      "quote": {
+        "03/20/2021": {
+          "value": "0.0007",
+          "Market Cap": "100,672",
+          "Beta (5Y Monthly)": "13.97",
+          "PE Ratio (TTM)": "N/A",
+          "EPS (TTM)": "-0.0420",
+          "Earnings Date": "Aug 17, 2018 - Aug 20, 2018",
+          "Forward Dividend & Yield": "N/A (N/A)",
+          "Ex-Dividend Date": "N/A",
+          "1y Target Est": "0.57"
+        }
+      }
+    }
+  },
+  {
+    "BFGC": {
+      "quote": {
+        "03/20/2021": {
+          "value": "0.3393",
+          "Market Cap": "18.879M",
+          "Beta (5Y Monthly)": "N/A",
+          "PE Ratio (TTM)": "N/A",
+          "EPS (TTM)": "N/A",
+          "Earnings Date": "N/A",
+          "Forward Dividend & Yield": "N/A (N/A)",
+          "Ex-Dividend Date": "N/A",
+          "1y Target Est": "N/A"
+        }
+      }
+    }
+  },
+  {
+    "THM": {
+      "quote": {
+        "03/20/2021": {
+          "value": "1.4000",
+          "Market Cap": "263.634M",
+          "Beta (5Y Monthly)": "0.79",
+          "PE Ratio (TTM)": "N/A",
+          "EPS (TTM)": "-0.0240",
+          "Earnings Date": "N/A",
+          "Forward Dividend & Yield": "N/A (N/A)",
+          "Ex-Dividend Date": "N/A",
+          "1y Target Est": "5.00"
+        }
+      }
+    }
+  },
+  {
+    "NG": {
+      "quote": {
+        "03/20/2021": {
+          "value": "9.67",
+          "Market Cap": "3.195B",
+          "Beta (5Y Monthly)": "0.40",
+          "PE Ratio (TTM)": "N/A",
+          "EPS (TTM)": "-0.10",
+          "Earnings Date": "N/A",
+          "Forward Dividend & Yield": "N/A (N/A)",
+          "Ex-Dividend Date": "N/A",
+          "1y Target Est": "7.25"
+        }
+      }
+    }
+  },
+  {
+    "RIC": {
+      "quote": {
+        "03/20/2021": {
+          "value": "",
+          "Net Assets": "N/A",
+          "Beta (5Y Monthly)": "N/A",
+          "Yield": "N/A",
+          "5y Average Return": "N/A",
+          "Holdings Turnover": "N/A",
+          "Last Dividend": "N/A",
+          "Average for Category": "N/A",
+          "Inception Date": "N/A"
+        }
+      }
+    }
+  },
+  {
+    "KGJI": {
+      "quote": {
+        "03/20/2021": {
+          "value": "0.2500",
+          "Market Cap": "2.812M",
+          "Beta (5Y Monthly)": "-0.00",
+          "PE Ratio (TTM)": "0.62",
+          "EPS (TTM)": "0.4050",
+          "Earnings Date": "Jun 29, 2020 - Jun 30, 2020",
+          "Forward Dividend & Yield": "N/A (N/A)",
+          "Ex-Dividend Date": "Jun 26, 2014",
+          "1y Target Est": "N/A"
+        }
+      }
+    }
+  },
+  {
+    "OSTO": {
+      "quote": {
+        "03/20/2021": {
+          "value": "0.2500",
+          "Market Cap": "3.586M",
+          "Beta (5Y Monthly)": "-696.43",
+          "PE Ratio (TTM)": "N/A",
+          "EPS (TTM)": "-0.0230",
+          "Earnings Date": "N/A",
+          "Forward Dividend & Yield": "N/A (N/A)",
+          "Ex-Dividend Date": "N/A",
+          "1y Target Est": "N/A"
+        }
+      }
+    }
+  },
+  {
+    "LVCA": {
+      "quote": {
+        "03/20/2021": {
+          "value": "0.0278",
+          "Market Cap": "925,740",
+          "Beta (5Y Monthly)": "2.40",
+          "PE Ratio (TTM)": "N/A",
+          "EPS (TTM)": "-0.0110",
+          "Earnings Date": "N/A",
+          "Forward Dividend & Yield": "N/A (N/A)",
+          "Ex-Dividend Date": "N/A",
+          "1y Target Est": "N/A"
+        }
+      }
+    }
+  },
+  {
+    "CTGO": {
+      "quote": {
+        "03/20/2021": {
+          "value": "17.00",
+          "Market Cap": "104.583M",
+          "Beta (5Y Monthly)": "1.24",
+          "PE Ratio (TTM)": "4.24",
+          "EPS (TTM)": "4.01",
+          "Earnings Date": "Feb 11, 2021",
+          "Forward Dividend & Yield": "N/A (N/A)",
+          "Ex-Dividend Date": "N/A",
+          "1y Target Est": "31.00"
+        }
+      }
+    }
+  },
+  {
+    "USCS": {
+      "quote": {
+        "03/20/2021": {
+          "value": "0.0165",
+          "Market Cap": "5.072M",
+          "Beta (5Y Monthly)": "-1.40",
+          "PE Ratio (TTM)": "",
+          "EPS (TTM)": "0.0000",
+          "Earnings Date": "N/A",
+          "Forward Dividend & Yield": "N/A (N/A)",
+          "Ex-Dividend Date": "N/A",
+          "1y Target Est": "N/A"
+        }
+      }
+    }
+  },
+  {
+    "AIVN": {
+      "quote": {
+        "03/20/2021": {
+          "value": "0.0290",
+          "Market Cap": "2.245M",
+          "Beta (5Y Monthly)": "2.58",
+          "PE Ratio (TTM)": "N/A",
+          "EPS (TTM)": "-0.0030",
+          "Earnings Date": "N/A",
+          "Forward Dividend & Yield": "N/A (N/A)",
+          "Ex-Dividend Date": "N/A",
+          "1y Target Est": "N/A"
+        }
+      }
+    }
+  },
+  {
+    "CGCO": {
+      "quote": {
+        "03/20/2021": {
+          "value": "0.0600",
+          "Market Cap": "307,507",
+          "Beta (5Y Monthly)": "-0.16",
+          "PE Ratio (TTM)": "N/A",
+          "EPS (TTM)": "-0.1760",
+          "Earnings Date": "N/A",
+          "Forward Dividend & Yield": "N/A (N/A)",
+          "Ex-Dividend Date": "N/A",
+          "1y Target Est": "N/A"
+        }
+      }
+    }
+  },
+  {
+    "IMII": {
+      "quote": {
+        "03/20/2021": {
+          "value": "0.0386",
+          "Market Cap": "2.832M",
+          "Beta (5Y Monthly)": "1.10",
+          "PE Ratio (TTM)": "9.65",
+          "EPS (TTM)": "0.0040",
+          "Earnings Date": "N/A",
+          "Forward Dividend & Yield": "N/A (N/A)",
+          "Ex-Dividend Date": "N/A",
+          "1y Target Est": "0.19"
+        }
+      }
+    }
+  }
+]

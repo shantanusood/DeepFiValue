@@ -11,41 +11,47 @@ import script as s
 import traceback
 from datetime import datetime
 import csv
+import re
+from requests import get
 
 app = Flask(__name__)
 CORS(app)
+
+#Resources:
+
+#Insider buyers:
+#       http://openinsider.com/search?q=<TICKER>
+#		https://whalewisdom.com/stock/<TICKER>
+
+#General info:
+#		https://stockcharts.com/freecharts/symbolsummary.html?sym=<TICKER>
+#		https://seekingalpha.com/symbol/<TICKER>
+
+#Corporate debt:
+#		https://finra-markets.morningstar.com/BondCenter/
+
+
+
+#Financials			XLK
+#Technology			XLF
+#Health Care			XLV
+#Consumer Discretionary		XLY
+#Industrials			XLI
+#Energy				XLE
+#Consumer Staples		XLP
+#Communications			XLC
+#Utilities			XLU
+#Materials			XLB
+#Real Estate			XLRE
+#Transportation			XTN
+#Commodity			GLD
 
 #####################################################################################################################
 ############################################## WEB DATA FETCH SERVICE ###############################################
 #####################################################################################################################
 @app.route('/')
 def quide():
-    return """
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<p>
-<h3>Try out below:</h3>
-</p>
-<ul>
-<li><b>Indicators (/indicators/<u>Type</u>):</b>
-    <ol>
-        <table style="border: 1px solid black">
-            <tr><th>Type</th><th>Description</th></tr>
-            <tr><td>cci</td> <td>Consumer confidence index</td></tr>
-            <tr><td>jobless</td></td><td> US Unemployment rate</td></tr>
-            <tr><td>pe</td><td> SP500 price to earnings ratio</td></tr>
-            <tr><td>dtrlarindex</td><td> Trade weighted us dollar index broad goods and services</td></tr>
-            <tr><td>inflation</td><td> US Inflation rate</td></tr>
-            <tr><td>putcall</td><td> Cboe Equity Put/Call Ratio</td></tr>
-            <tr><td>manufacturing</td><td> US ISM Manufacturing PMI</td></tr>
-        </table>
-    </ol>
-</li>
-</ul>
-</body>
-</html>
-"""
+    return render_template('template.html')
 
 @app.route('/indicators/<type>')
 def indicators_data(type):
@@ -119,12 +125,16 @@ def stocksBySector(country, parent, category):
         metadata_category = metadata_country[is_category]
         return "["+str(metadata_category.to_json(orient='records', lines=True).replace('}', '},'))[:-1].replace("'", "\"")+"]"
 
+@app.route('/data/cik/<ticker>')
+def get_cik_ticker(ticker):
+    return str(getCIK(ticker)).replace("'", "\"")
+
 #####################################################################################################################
 ############################################# LOCAL DATA FETCH SERVICE ##############################################
 #####################################################################################################################
 @app.route('/data/get/<parent>/<subsector>/<ticker>/<type>')
 def data_get(parent, subsector, ticker, type):
-    filename = './data/sectors/' + str(parent) + "/" + subsector + '.json'
+    filename = './data/sectors/' + str(parent).replace(" ", "_") + "/" + subsector + '.json'
     getData = {}
     data = []
     try:
@@ -282,6 +292,92 @@ def data_sync_update(parent, subsector, ticker, type):
         traceback.print_exc()
         return str("ERROR: Data sync update failed for: " + parent + " > " + subsector + " > " + ticker + " > " + type)
 
+@app.route('/data/sync/sector/<parent>/<subsector>/<type>')
+def data_sync_sector(parent, subsector, type):
+    metadata = []
+    metadata_country = []
+    metadata_category = []
+    tickers = []
+    metadata_agg = ""
+    failed = []
+    try:
+        if os.path.isfile('./data/tickers/Stocks.csv'):
+            metadata = t.ticker_details("Stocks")
+        else:
+            pass
+        is_country = metadata['Country'] == "USA"
+        metadata_country = metadata[is_country]
+        is_category = metadata['Category'] == str(subsector)
+        metadata_category = metadata_country[is_category]
+        tickers = list(metadata_category['Ticker'])
+
+        for x in tickers:
+            try:
+                toSync = quote(type, x)
+                checkData = data_get(parent, subsector, x, type)
+                if "ERROR" in str(checkData):
+                    data_sync_dump_in(parent, subsector, x, type, json.loads(toSync))
+                else:
+                    data_sync_update_in(parent, subsector, x, type, json.loads(toSync))
+            except:
+                print("**Failed Synced ticker: " + x)
+                failed.append(x)
+        if len(failed) == 0:
+            return "All tickers synced successfully"
+        else:
+            return "ERROR: These tickers did not sync: " + str(failed)
+    except:
+        return "Some ERROR occured while syncing"
+
+@app.route('/data/sync/indicators/<parent>/<subsector>/<type>', methods=["GET", "POST"])
+def data_sync_indicators(parent, subsector, type):
+    filename = './data/sectors/Indicators/indicators.json'
+    addData = dict(request.json)
+    f = ""
+    data = []
+    try:
+        if os.path.isfile(filename):
+            f = open(filename, "r")
+        else:
+            f = open(filename, "x")
+            f.write("[]")
+            f.close()
+        with open(filename, 'r') as data_file:
+            data = json.loads(data_file.read())
+            count = 0
+            isFound = False
+            tick_jsons = {}
+            for x in data:
+                tick_jsons = dict(x)
+                if list(tick_jsons.keys())[0] == str(subsector):
+                    for k in addData:
+                        data[count][str(subsector)][str(type)][k] = addData[k]
+                    isFound = True
+                    break
+                count = count + 1
+            if isFound == False:
+                type_jsons = {str(type): addData}
+                tick_jsons = {str(subsector): type_jsons}
+                data.append(tick_jsons)
+        with open(filename, 'w') as data_file:
+            data_file.write(str(data).replace("'", "\""))
+
+        r_row = []
+        with open('./data/tickers/Stocks.csv', 'r') as in_file:
+            r_row = list(csv.reader(in_file))
+        with open('./data/tickers/Stocks.csv', 'w', newline='') as out_file:
+            writer = csv.writer(out_file)
+            for row in r_row:
+                if row[0] == subsector:
+                    if type == 'quote':
+                        row[5] = str(datetime.today().strftime('%m/%d/%Y'))
+                if row:
+                    writer.writerow(row)
+        return str(data).replace("'", "\"")
+    except:
+        traceback.print_exc()
+        return str("ERROR: Data sync dump failed for: " + parent + " > " + subsector + " > " + type)
+
 #####################################################################################################################
 ################################################# HELPER FUNCTIONS ##################################################
 #####################################################################################################################
@@ -293,3 +389,127 @@ def getMetadata(input):
             metadata = t.ticker_details(input)
     return metadata
 
+def data_sync_dump_in(parent, subsector, ticker, type, data):
+    filename = './data/sectors/' + str(parent).replace(" ", "_") + "/" + subsector + '.json'
+    addData = data
+    f = ""
+    data = []
+    try:
+        if os.path.isfile(filename):
+            f = open(filename, "r")
+        else:
+            f = open(filename, "x")
+            f.write("[]")
+            f.close()
+        with open(filename, 'r') as data_file:
+            data = json.loads(data_file.read())
+            count = 0
+            isFound = False
+            tick_jsons = {}
+            for x in data:
+                tick_jsons = dict(x)
+                if list(tick_jsons.keys())[0] == str(ticker):
+                    data[count][str(ticker)][str(type)] = addData
+                    isFound = True
+                    break
+                count = count + 1
+            if isFound == False:
+                type_jsons = {str(type): addData}
+                tick_jsons = {str(ticker): type_jsons}
+                data.append(tick_jsons)
+        with open(filename, 'w') as data_file:
+            data_file.write(str(data).encode("ascii", errors="ignore").decode().replace("'", "\""))
+
+        r_row = []
+        with open('./data/tickers/Stocks.csv', 'r') as in_file:
+            r_row = list(csv.reader(in_file))
+        with open('./data/tickers/Stocks.csv', 'w', newline='') as out_file:
+            writer = csv.writer(out_file)
+            for row in r_row:
+                if row[0] == ticker:
+                    if type == 'quote':
+                        row[5] = str(datetime.today().strftime('%m/%d/%Y'))
+                    elif type == 'fin':
+                        row[6] = str(datetime.today().strftime('%m/%d/%Y'))
+                    elif type == 'bs':
+                        row[7] = str(datetime.today().strftime('%m/%d/%Y'))
+                    elif type == 'cf':
+                        row[8] = str(datetime.today().strftime('%m/%d/%Y'))
+                    elif type == 'inside':
+                        row[9] = str(datetime.today().strftime('%m/%d/%Y'))
+                    elif type == 'inst':
+                        row[10] = str(datetime.today().strftime('%m/%d/%Y'))
+                    elif type == 'bonds':
+                        row[11] = str(datetime.today().strftime('%m/%d/%Y'))
+                if row:
+                    writer.writerow(row)
+        return str(data).replace("'", "\"")
+    except:
+        traceback.print_exc()
+        return str("ERROR: Data sync dump failed for: " + parent + " > " + subsector + " > " + ticker + " > " + type)
+
+def data_sync_update_in(parent, subsector, ticker, type, data):
+    filename = './data/sectors/' + str(parent).replace(" ", "_") + "/" + subsector + '.json'
+    addData = data
+    f = ""
+    data = []
+    try:
+        with open(filename, 'r') as data_file:
+            data = json.loads(data_file.read())
+            count = 0
+            tick_jsons = {}
+            for x in data:
+                tick_jsons = dict(x)
+                if list(tick_jsons.keys())[0] == str(ticker):
+                    tm_data_incoming = list(addData.keys())
+                    for i in tm_data_incoming:
+                        data[count][str(ticker)][str(type)][str(i)] = addData[str(i)]
+                    break
+                count = count + 1
+        with open(filename, 'w') as data_file:
+            data_file.write(str(data).replace("'", "\""))
+
+        r_row = []
+        with open('./data/tickers/Stocks.csv', 'r') as in_file:
+            r_row = list(csv.reader(in_file))
+        with open('./data/tickers/Stocks.csv', 'w', newline='') as out_file:
+            writer = csv.writer(out_file)
+            for row in r_row:
+                if row[0] == ticker:
+                    if type == 'quote':
+                        row[5] = str(datetime.today().strftime('%m/%d/%Y'))
+                    elif type == 'fin':
+                        row[6] = str(datetime.today().strftime('%m/%d/%Y'))
+                    elif type == 'bs':
+                        row[7] = str(datetime.today().strftime('%m/%d/%Y'))
+                    elif type == 'cf':
+                        row[8] = str(datetime.today().strftime('%m/%d/%Y'))
+                    elif type == 'inside':
+                        row[9] = str(datetime.today().strftime('%m/%d/%Y'))
+                    elif type == 'inst':
+                        row[10] = str(datetime.today().strftime('%m/%d/%Y'))
+                    elif type == 'bonds':
+                        row[11] = str(datetime.today().strftime('%m/%d/%Y'))
+                if row:
+                    writer.writerow(row)
+        return str(data).replace("'", "\"")
+    except:
+        traceback.print_exc()
+        return str("ERROR: Data sync update failed for: " + parent + " > " + subsector + " > " + ticker + " > " + type)
+
+def getCIK(ticker):
+    DEFAULT_TICKERS = []
+    DEFAULT_TICKERS.append(ticker)
+    URL = 'http://www.sec.gov/cgi-bin/browse-edgar?CIK={}&Find=Search&owner=exclude&action=getcompany'
+    CIK_RE = re.compile(r'.*CIK=(\d{10}).*')
+    cik_dict = {}
+    for ticker in DEFAULT_TICKERS:
+        print(URL.format(ticker))
+        results = CIK_RE.findall(get(URL.format(ticker)).content)
+        if len(results):
+            cik_dict[str(ticker).lower()] = str(results[0])
+    print(cik_dict)
+    # f = open('cik_dict', 'w')
+    # dump(cik_dict, f)
+    # f.close()
+    return cik_dict
