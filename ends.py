@@ -3,6 +3,7 @@ import json
 import os
 from flask_cors import CORS
 from data.Indicators import Indicators
+from src.engine.Decide import Decide
 from bs4 import BeautifulSoup
 import pandas as pd
 from data import tickers_list as t
@@ -46,6 +47,34 @@ CORS(app)
 #Transportation			XTN
 #Commodity			GLD
 
+#Income statement (fin)
+#	> Annual growth of revenue (% change in revenue yoy)
+#	> % of cost of revenue = (Cost of revenue/Total revenue)*100
+#	> Gross profit margin % = (Gross Profit/Total revenue)*100
+#	> Operating margin % = (Operating Income / Revenue)*100
+
+#Balance Sheet (bs)
+#	> Total Assets = Total Liabilities + Total Shareholder equity
+#	> Total Assets/Total Liabilities
+#	> Total Debt change (% change in yoy)
+
+#Cash flow (cf)
+#	> Free cash flow change yoy (%)
+
+#Important ratios:
+#	> Price to sales (P/S)
+#		Take todays stock price and devide it by the sales,
+#		results in a multiple like 2X
+#	> Price to earnings (P/E)
+#		Take todays stock price and divide it by the earnings
+#	> Price to book value (P/BV)
+#		Take todays stock price and devide by book value,
+#		book value = Assets - Liabilities
+#	> Price to free cash flow (P/FCF)
+#		Take todays stock price and divide by free cash flow,
+#		Free cash flow = Cash flow from operations - Capex (capital expenditures)
+
+
 #####################################################################################################################
 ############################################## WEB DATA FETCH SERVICE ###############################################
 #####################################################################################################################
@@ -88,7 +117,7 @@ def quote(filter, tickers):
                 ret_dict_sync = {}
         return str(ret_dict_sync_tm).replace("'", "\"")
     else:
-        return str("ERROR: Unable to sync data for: " + filter + " > " + tickers).replace("'", "\"")
+        return str("{'res': 'ERROR: Unable to sync data for: " + filter + " > " + tickers + "'}").replace("'", "\"")
 
 @app.route('/csv/<type>')
 def csvData(type):
@@ -101,29 +130,45 @@ def stocksBySector(country, parent, category):
     metadata_agg = ""
     category = str(category).replace("+", " ")
     get_parent = ""
-    if os.path.isfile('./data/tickers/Categories.csv'):
-        get_parent = pd.read_csv('./data/tickers/Categories.csv')
-    isParent = get_parent['ParentSector'] == str(parent)
-    parentSect = get_parent[isParent]
-    categories = parentSect['Subsector']
-    if category == 'All':
+    if str(parent) == "Customs":
         if os.path.isfile('./data/tickers/Stocks.csv'):
             metadata = t.ticker_details("Stocks")
-        for x in categories:
+        tickers = []
+        data = []
+        with open('./data/sectors/Customs/'+str(category)+'.csv', newline='') as f:
+            reader = csv.reader(f)
+            tickers = list(reader)[0]
+        for ticks in tickers:
             is_country = metadata['Country'] == str(country)
-            is_category = metadata['Category'] == str(x)
+            is_category = metadata['Ticker'] == str(ticks)
             metadata_country = metadata[is_country]
             metadata_category = metadata_country[is_category]
-            metadata_agg = metadata_agg + str(metadata_category.to_json(orient='records', lines=True).replace('}', '},')).replace("'", "\"")
-        return "["+metadata_agg[:-1].replace("'", "\"")+"]"
+            data.append(metadata_category.to_json(orient='records', lines=True))
+        return str(data).replace("'", "").replace("\\\\", "")
     else:
-        if os.path.isfile('./data/tickers/Stocks.csv'):
-            metadata = t.ticker_details("Stocks")
-        is_country = metadata['Country'] == str(country)
-        is_category = metadata['Category'] == str(category)
-        metadata_country = metadata[is_country]
-        metadata_category = metadata_country[is_category]
-        return "["+str(metadata_category.to_json(orient='records', lines=True).replace('}', '},'))[:-1].replace("'", "\"")+"]"
+        if os.path.isfile('./data/tickers/Categories.csv'):
+            get_parent = pd.read_csv('./data/tickers/Categories.csv')
+        isParent = get_parent['ParentSector'] == str(parent)
+        parentSect = get_parent[isParent]
+        categories = parentSect['Subsector']
+        if category == 'All':
+            if os.path.isfile('./data/tickers/Stocks.csv'):
+                metadata = t.ticker_details("Stocks")
+            for x in categories:
+                is_country = metadata['Country'] == str(country)
+                is_category = metadata['Category'] == str(x)
+                metadata_country = metadata[is_country]
+                metadata_category = metadata_country[is_category]
+                metadata_agg = metadata_agg + str(metadata_category.to_json(orient='records', lines=True).replace('}', '},')).replace("'", "\"")
+            return "["+metadata_agg[:-1].replace("'", "\"")+"]"
+        else:
+            if os.path.isfile('./data/tickers/Stocks.csv'):
+                metadata = t.ticker_details("Stocks")
+            is_country = metadata['Country'] == str(country)
+            is_category = metadata['Category'] == str(category)
+            metadata_country = metadata[is_country]
+            metadata_category = metadata_country[is_category]
+            return "["+str(metadata_category.to_json(orient='records', lines=True).replace('}', '},'))[:-1].replace("'", "\"")+"]"
 
 @app.route('/data/cik/<ticker>')
 def get_cik_ticker(ticker):
@@ -150,11 +195,11 @@ def data_get(parent, subsector, ticker, type):
                     break
                 count = count + 1
             if isFound == False:
-                return str("ERROR: Data not yet synced for: " + parent + " > " + subsector + " > " + ticker + " > " + type)
+                return str("{'res': 'ERROR: Data not yet synced for: " + parent + " > " + subsector + " > " + ticker + " > " + type + "'}")
         return str(getData).replace("'", "\"")
     except:
         traceback.print_exc()
-        return str("ERROR: Data get failed for: " + parent + " > " + subsector + " > " + ticker + " > " + type)
+        return str("{'res' :'ERROR: Data get failed for: " + parent + " > " + subsector + " > " + ticker + " > " + type + "'}").replace("'", "\"")
 
 @app.route('/data/getSectors')
 def getSectors():
@@ -174,17 +219,26 @@ def getSectors():
 @app.route('/data/getSubSectors/<parent>')
 def getSubSectors(parent):
     get_parent = ""
-    if os.path.isfile('./data/tickers/Categories.csv'):
-        get_parent = pd.read_csv('./data/tickers/Categories.csv')
-    is_sub = get_parent['ParentSector'] == str(parent)
-    return str(get_parent[is_sub]['Subsector'].to_list()).replace("'", "\"")
+    if str(parent) == "Customs":
+        for filenames in os.walk('./data/sectors/Customs'):
+            for f in filenames:
+                if isinstance(f, list):
+                    if len(f) > 0:
+                        return str([x.split(".")[0] for x in f]).replace("'", "\"")
+            break
+        return "[]"
+    else:
+        if os.path.isfile('./data/tickers/Categories.csv'):
+            get_parent = pd.read_csv('./data/tickers/Categories.csv')
+        is_sub = get_parent['ParentSector'] == str(parent)
+        return str(get_parent[is_sub]['Subsector'].to_list()).replace("'", "\"")
 
 #####################################################################################################################
 ################################################ DATA SYNC SERVICE ##################################################
 #####################################################################################################################
 @app.route('/data/sync/dump/<parent>/<subsector>/<ticker>/<type>', methods=['GET', 'POST'])
 def data_sync_dump(parent, subsector, ticker, type):
-    filename = './data/sectors/' + str(parent) + "/" + subsector + '.json'
+    filename = './data/sectors/' + str(parent).replace(" ", "_") + "/" + subsector + '.json'
     addData = request.json
     f = ""
     data = []
@@ -240,11 +294,11 @@ def data_sync_dump(parent, subsector, ticker, type):
         return str(data).replace("'", "\"")
     except:
         traceback.print_exc()
-        return str("ERROR: Data sync dump failed for: " + parent + " > " + subsector + " > " + ticker + " > " + type)
+        str("{'res': 'ERROR: Data sync dump failed for: " + parent + " > " + subsector + " > " + type + "'}").replace("'", "\"")
 
 @app.route('/data/sync/update/<parent>/<subsector>/<ticker>/<type>', methods=['GET', 'POST'])
 def data_sync_update(parent, subsector, ticker, type):
-    filename = './data/sectors/' + str(parent) + "/" + subsector + '.json'
+    filename = './data/sectors/' + str(parent).replace(" ", "_") + "/" + subsector + '.json'
     addData = request.json
     f = ""
     data = []
@@ -290,7 +344,7 @@ def data_sync_update(parent, subsector, ticker, type):
         return str(data).replace("'", "\"")
     except:
         traceback.print_exc()
-        return str("ERROR: Data sync update failed for: " + parent + " > " + subsector + " > " + ticker + " > " + type)
+        return str("{'res': 'ERROR: Data sync update failed for: " + parent + " > " + subsector + " > " + type + "'}").replace("'", "\"")
 
 @app.route('/data/sync/sector/<parent>/<subsector>/<type>')
 def data_sync_sector(parent, subsector, type):
@@ -323,11 +377,15 @@ def data_sync_sector(parent, subsector, type):
                 print("**Failed Synced ticker: " + x)
                 failed.append(x)
         if len(failed) == 0:
-            return "All tickers synced successfully"
+            return str("{'res': 'All tickers synced successfully'}").replace("'", "\"").replace("'", "\"")
         else:
-            return "ERROR: These tickers did not sync: " + str(failed)
+            print(failed)
+            str_failed = str(failed).replace("'", "")
+            print(str_failed)
+            print(str("{'res': 'ERROR: These tickers did not sync: " + str_failed + "'}").replace("'", "\""))
+            return str("{'res': 'ERROR: These tickers did not sync: " + str_failed + "'}").replace("'", "\"")
     except:
-        return "Some ERROR occured while syncing"
+        return str("{'res': 'Some ERROR occured while syncing'}").replace("'", "\"")
 
 @app.route('/data/sync/indicators/<parent>/<subsector>/<type>', methods=["GET", "POST"])
 def data_sync_indicators(parent, subsector, type):
@@ -376,7 +434,7 @@ def data_sync_indicators(parent, subsector, type):
         return str(data).replace("'", "\"")
     except:
         traceback.print_exc()
-        return str("ERROR: Data sync dump failed for: " + parent + " > " + subsector + " > " + type)
+        return str("{'res': 'ERROR: Data sync dump failed for: " + parent + " > " + subsector + " > " + type + "'}").replace("'", "\"")
 
 #####################################################################################################################
 ################################################# HELPER FUNCTIONS ##################################################
@@ -446,7 +504,7 @@ def data_sync_dump_in(parent, subsector, ticker, type, data):
         return str(data).replace("'", "\"")
     except:
         traceback.print_exc()
-        return str("ERROR: Data sync dump failed for: " + parent + " > " + subsector + " > " + ticker + " > " + type)
+        return str("{'res':'ERROR: Data sync dump failed for: " + parent + " > " + subsector + " > " + ticker + " > " + type + "'}").replace("'", "\"")
 
 def data_sync_update_in(parent, subsector, ticker, type, data):
     filename = './data/sectors/' + str(parent).replace(" ", "_") + "/" + subsector + '.json'
@@ -495,7 +553,7 @@ def data_sync_update_in(parent, subsector, ticker, type, data):
         return str(data).replace("'", "\"")
     except:
         traceback.print_exc()
-        return str("ERROR: Data sync update failed for: " + parent + " > " + subsector + " > " + ticker + " > " + type)
+        return str("{'res':'ERROR: Data sync update failed for: " + parent + " > " + subsector + " > " + ticker + " > " + type + "'}").replace("'", "\"")
 
 def getCIK(ticker):
     DEFAULT_TICKERS = []
@@ -513,3 +571,10 @@ def getCIK(ticker):
     # dump(cik_dict, f)
     # f.close()
     return cik_dict
+
+#####################################################################################################################
+################################################# DECISION ENGINE ###################################################
+#####################################################################################################################
+@app.route('/data/analyze/<parent>/<subsector>/<type>', methods=["GET", "POST"])
+def data_analysis_engine(parent, subsector, type):
+    return Decide(parent, subsector, type, list(request.json)).final()
