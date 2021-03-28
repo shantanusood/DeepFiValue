@@ -14,6 +14,7 @@ from datetime import datetime
 import csv
 import re
 from requests import get
+import numpy as np
 
 app = Flask(__name__)
 CORS(app)
@@ -46,34 +47,6 @@ CORS(app)
 #Real Estate			XLRE
 #Transportation			XTN
 #Commodity			GLD
-
-#Income statement (fin)
-#	> Annual growth of revenue (% change in revenue yoy)
-#	> % of cost of revenue = (Cost of revenue/Total revenue)*100
-#	> Gross profit margin % = (Gross Profit/Total revenue)*100
-#	> Operating margin % = (Operating Income / Revenue)*100
-
-#Balance Sheet (bs)
-#	> Total Assets = Total Liabilities + Total Shareholder equity
-#	> Total Assets/Total Liabilities
-#	> Total Debt change (% change in yoy)
-
-#Cash flow (cf)
-#	> Free cash flow change yoy (%)
-
-#Important ratios:
-#	> Price to sales (P/S)
-#		Take todays stock price and devide it by the sales,
-#		results in a multiple like 2X
-#	> Price to earnings (P/E)
-#		Take todays stock price and divide it by the earnings
-#	> Price to book value (P/BV)
-#		Take todays stock price and devide by book value,
-#		book value = Assets - Liabilities
-#	> Price to free cash flow (P/FCF)
-#		Take todays stock price and divide by free cash flow,
-#		Free cash flow = Cash flow from operations - Capex (capital expenditures)
-
 
 #####################################################################################################################
 ############################################## WEB DATA FETCH SERVICE ###############################################
@@ -578,3 +551,26 @@ def getCIK(ticker):
 @app.route('/data/analyze/<parent>/<subsector>/<type>', methods=["GET", "POST"])
 def data_analysis_engine(parent, subsector, type):
     return Decide(parent, subsector, type, list(request.json)).final()
+
+@app.route('/data/analyze/sectors/<type>', methods=["GET", "POST"])
+def data_analysis_sector_avg(type):
+    data = list(request.json)
+    vals_all = {}
+    for d in data:
+        ty = dict(d[str(type)])
+        for x in ty:
+            vals_all[str(x)] = []
+    for d in data:
+        ty = dict(d[str(type)])
+        for x in ty:
+            for y in vals_all:
+                if str(x) == str(y):
+                    if ty[str(y)] != '-999':
+                        try:
+                            vals_all[y].append(float(ty[str(y)]))
+                        except:
+                            pass
+    ret_final = []
+    for x in vals_all:
+        ret_final.append([x, str(round(np.mean(vals_all[x]), 2))])
+    return str(ret_final).replace("'", "\"")

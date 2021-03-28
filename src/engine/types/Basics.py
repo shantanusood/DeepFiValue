@@ -188,8 +188,8 @@ class Basics:
                     if 'N/A' in p_e[str(list(p_e.keys())[0])]['1y Target Est']:
                         self.data[count]['basics']['upside'] = '-999'
                     else:
-                        target = float(p_e[str(list(p_e.keys())[0])]['1y Target Est'])
-                        price = float(p_e[str(list(p_e.keys())[0])]['value'])
+                        target = float(p_e[str(list(p_e.keys())[0])]['1y Target Est'].replace(",", ""))
+                        price = float(p_e[str(list(p_e.keys())[0])]['value'].replace(",", ""))
                         upside = round(((target - price)/price)*100, 2)
                         self.data[count]['basics']['upside'] = str(upside)
             except:
