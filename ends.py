@@ -48,6 +48,15 @@ CORS(app)
 #Transportation			XTN
 #Commodity			GLD
 
+#Ways to value a company:
+#   > Price to earnings multiple (profitable companies)
+#   > Discounted free cash flow
+#   > Enterprise value / EBITDA or Revenue (For younger non profitable companies)
+#   > Sum of the parts
+
+# PEG ratio
+# Key statistics: https://finance.yahoo.com/quote/<TICKER>/key-statistics/
+
 #####################################################################################################################
 ############################################## WEB DATA FETCH SERVICE ###############################################
 #####################################################################################################################
