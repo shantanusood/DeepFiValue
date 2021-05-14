@@ -294,10 +294,13 @@ def data_sync_update(parent, subsector, ticker, type):
                 if list(tick_jsons.keys())[0] == str(ticker):
                     tm_data_incoming = list(addData.keys())
                     for i in tm_data_incoming:
-                        data[count][str(ticker)][str(type)][str(i)] = addData[str(i)]
+                        if 'quote' in str(type):
+                            data[count][str(ticker)][str(type)] = {str(i) : addData[str(i)]}
+                        else:
+                            data[count][str(ticker)][str(type)][str(i)] = addData[str(i)]
                     break
                 count = count + 1
-        with open(filename, 'w') as data_file:
+        with open(filename, 'w', encoding="utf-8") as data_file:
             data_file.write(str(data).replace("'", "\""))
 
         r_row = []
@@ -503,10 +506,13 @@ def data_sync_update_in(parent, subsector, ticker, type, data):
                 if list(tick_jsons.keys())[0] == str(ticker):
                     tm_data_incoming = list(addData.keys())
                     for i in tm_data_incoming:
-                        data[count][str(ticker)][str(type)][str(i)] = addData[str(i)]
+                        if 'quote' in str(type):
+                            data[count][str(ticker)][str(type)] = {str(i): addData[str(i)]}
+                        else:
+                            data[count][str(ticker)][str(type)][str(i)] = addData[str(i)]
                     break
                 count = count + 1
-        with open(filename, 'w') as data_file:
+        with open(filename, 'w', encoding="utf-8") as data_file:
             data_file.write(str(data).replace("'", "\""))
 
         r_row = []
