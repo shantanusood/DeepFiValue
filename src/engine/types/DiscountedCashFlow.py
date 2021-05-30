@@ -12,4 +12,10 @@ class DiscountedCashFlow:
         print("From Discount")
         print(self.parent)
         print(self.subsector)
-        return ""
+        return str(self.data).replace("'", "\"")
+
+
+#We need 3 things for doing this calculations:
+#   1. Free cash flow projections
+#   2. WACC (weighted average cost of capital) & Perpectual growth rate of free cash flow (2.5%)
+#   3. Terminal value

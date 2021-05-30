@@ -8,6 +8,31 @@ def table_data():
 def table_breakdown_header():
     return "div[class='D(tbhg)'] > div > div"
 
+def ks_table_data():
+    #For historical local data
+    return "section[data-test='qsp-statistics'] > div:nth-child(2) > div:nth-child(1) > div:nth-child(3) > div > div:nth-child(1) > div > table > tbody > tr > td[class*='pnclg']"
+    #For fetching from yahoo online
+    #return "section[data-test='qsp-statistics'] > div:nth-child(3) > div:nth-child(1) > div:nth-child(3) > div > div:nth-child(1) > div > table > tbody > tr > td[class*='pnclg']"
+
+def ks_table_labels():
+    #For historical local data
+    return "section[data-test='qsp-statistics'] > div:nth-child(2) > div:nth-child(1) > div:nth-child(3) > div > div:nth-child(1) > div > table > thead > tr > th > span"
+    #For fetching from yahoo online
+    #return "section[data-test='qsp-statistics'] > div:nth-child(3) > div:nth-child(1) > div:nth-child(3) > div > div:nth-child(1) > div > table > thead > tr > th > span"
+
+def ks_table_breakdown_header():
+    #For historical local data
+    return "section[data-test='qsp-statistics'] > div:nth-child(2) > div:nth-child(1) > div:nth-child(3) > div > div:nth-child(1) > div > table > tbody > tr > td:nth-child(1)"
+    #For fetching from yahoo online
+    #return "section[data-test='qsp-statistics'] > div:nth-child(3) > div:nth-child(1) > div:nth-child(3) > div > div:nth-child(1) > div > table > tbody > tr > td:nth-child(1)"
+
+def ks_stats_tables(leftOrRight, num_table):
+    #For fetching from yahoo online
+    return "section[data-test='qsp-statistics'] > div:nth-child(2) > div:nth-child("+str(leftOrRight)+") > div > div:nth-child("+str(num_table)+") > div > div > table > tbody > tr > td"
+
+def inside_table():
+    return "main[id='main'] > table > tr"
+
 def current_value():
     return "div[class$='Mend(20px)'] > span:nth-child(1)"
 

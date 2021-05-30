@@ -2,7 +2,7 @@
 import numpy as np
 import requests as r
 import sys
-from src import quote as q, financials as f, bs as b, cf as c 
+from src import quote as q, financials as f, bs as b, cf as c , ks as k, inside as ins
 import pandas as pd
 from data import tickers_list as tl
 import os.path
@@ -54,9 +54,21 @@ def main(filter, tickers):
             df = c.getCashFlow(resp[1])
             pd.set_option('display.max_rows', 10, 'display.max_columns', 100)
             return df
+    elif filter == 'ks':
+        resp = cm.getHtml("ks", tickers)
+        if resp[0]:
+            df = k.getKeyStats(resp[1])
+            pd.set_option('display.max_rows', 10, 'display.max_columns', 100)
+            return df
+    elif filter == 'inside':
+        resp = cm.getHtml("inside", tickers)
+        if resp[0]:
+            df = ins.getInsider(resp[1])
+            pd.set_option('display.max_rows', 10, 'display.max_columns', 100)
+            return df
     else:
         print("Invalid data request type, usage: ", end='')
-        print("'./script.py [quote|fin|bs|cf] [ticker]'")
+        print("'./script.py [quote|fin|bs|cf|ks|inside] [ticker]'")
 
 if __name__ == '__main__':
     d = {}

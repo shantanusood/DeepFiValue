@@ -1,0 +1,283 @@
+Ticker,Name,Exchange,Sector,Country,grb,nns,nn,ntnt,ntent,nteny,ntetn,ntn
+ADV, Advantage Solutions Inc, NMS,Advertising Agencies, USA, N, N, N, N, N, N, N, N
+CRTO, Criteo SA, NMS,Advertising Agencies, USA, N, N, N, N, N, N, N, N
+ICLK, iClick Interactive Asia Group Limited, NMS,Advertising Agencies, USA, N, N, N, N, N, N, N, N
+BYRN, Byrna Technologies Inc, NMS,Aerospace Defense Products & Services, USA, N, N, N, N, N, N, N, N
+EH, EHang Holdings Limited, NMS,Aerospace Defense Products & Services, USA, N, N, N, N, N, N, N, N
+ESLT, Elbit Systems Ltd, NMS,Aerospace Defense Products & Services, USA, N, N, N, N, N, N, N, N
+RYAAY, Ryanair Holdings plc, NMS,Major Airlines, USA, N, N, N, N, N, N, N, N
+SNCY, Sun Country Airlines Holdings Inc, NMS,Regional Airlines, USA, N, N, N, N, N, N, N, N
+ULCC, Frontier Group Holdings Inc, NMS,Regional Airlines, USA, N, N, N, N, N, N, N, N
+OMAB, Grupo Aeroportuario del Centro Norte SAB de CV, NMS,Air Services Other, USA, N, N, N, N, N, N, N, N
+CG, The Carlyle Group Inc, NMS,Asset Management, USA, N, N, N, N, N, N, N, N
+GCMG, GCM Grosvenor Inc, NMS,Asset Management, USA, N, N, N, N, N, N, N, N
+NMFC, New Mountain Finance Corporation, NMS,Asset Management, USA, N, N, N, N, N, N, N, N
+PAX, Patria Investments Limited, NMS,Asset Management, USA, N, N, N, N, N, N, N, N
+VCTR, Victory Capital Holdings Inc, NMS,Asset Management, USA, N, N, N, N, N, N, N, N
+DRVN, Driven Brands Holdings Inc, NMS,Auto Dealerships, USA, N, N, N, N, N, N, N, N
+VRM, Vroom Inc, NMS,Auto Dealerships, USA, N, N, N, N, N, N, N, N
+ARVL, Arrival, NMS,Auto Manufacturers - Major, USA, N, N, N, N, N, N, N, N
+GOEV, Canoo Inc, NMS,Auto Manufacturers - Major, USA, N, N, N, N, N, N, N, N
+LI, Li Auto Inc, NMS,Auto Manufacturers - Major, USA, N, N, N, N, N, N, N, N
+NIU, Niu Technologies, NMS,Auto Manufacturers - Major, USA, N, N, N, N, N, N, N, N
+NKLA, Nikola Corporation, NMS,Auto Manufacturers - Major, USA, N, N, N, N, N, N, N, N
+RIDE, Lordstown Motors Corp, NMS,Auto Manufacturers - Major, USA, N, N, N, N, N, N, N, N
+FHB, First Hawaiian Inc, NMS,Regional - Pacific Banks, USA, N, N, N, N, N, N, N, N
+OZK, Bank OZK, NMS,Regional - Southeast Banks, USA, N, N, N, N, N, N, N, N
+PFC, Premier Financial Corp, NMS,Regional - Midwest Banks, USA, N, N, N, N, N, N, N, N
+TCF, TCF Financial Corporation, NMS,Regional - Midwest Banks, USA, N, N, N, N, N, N, N, N
+TFSL, TFS Financial Corporation, NMS,Regional - Midwest Banks, USA, N, N, N, N, N, N, N, N
+UMPQ, Umpqua Holdings Corporation, NMS,Regional - Pacific Banks, USA, N, N, N, N, N, N, N, N
+KDP, Keurig Dr Pepper Inc, NMS,Beverages - Soft Drinks, USA, N, N, N, N, N, N, N, N
+ABCL, AbCellera Biologics Inc, NMS,Biotechnology, USA, N, N, N, N, N, N, N, N
+ABCM, Abcam plc, NMS,Biotechnology, USA, N, N, N, N, N, N, N, N
+ACRS, Aclaris Therapeutics Inc, NMS,Biotechnology, USA, N, N, N, N, N, N, N, N
+ADPT, Adaptive Biotechnologies Corporation, NMS,Biotechnology, USA, N, N, N, N, N, N, N, N
+ARGX, argenx SE, NMS,Biotechnology, USA, N, N, N, N, N, N, N, N
+AUPH, Aurinia Pharmaceuticals Inc, NMS,Biotechnology, USA, N, N, N, N, N, N, N, N
+BGNE, BeiGene Ltd, NMS,Biotechnology, USA, N, N, N, N, N, N, N, N
+BLI, Berkeley Lights Inc, NMS,Biotechnology, USA, N, N, N, N, N, N, N, N
+BNTX, BioNTech SE, NMS,Biotechnology, USA, N, N, N, N, N, N, N, N
+CERE, Cerevel Therapeutics Holdings Inc, NMS,Biotechnology, USA, N, N, N, N, N, N, N, N
+CERT, Certara Inc, NMS,Biotechnology, USA, N, N, N, N, N, N, N, N
+CRIS, Curis Inc, NMS,Biotechnology, USA, N, N, N, N, N, N, N, N
+CRSP, CRISPR Therapeutics AG, NMS,Biotechnology, USA, N, N, N, N, N, N, N, N
+CVAC, CureVac NV, NMS,Biotechnology, USA, N, N, N, N, N, N, N, N
+DSGN, Design Therapeutics Inc, NMS,Biotechnology, USA, N, N, N, N, N, N, N, N
+EPIX, ESSA Pharma Inc, NMS,Biotechnology, USA, N, N, N, N, N, N, N, N
+EWTX, Edgewise Therapeutics Inc, NMS,Biotechnology, USA, N, N, N, N, N, N, N, N
+GLPG, Galapagos NV, NMS,Biotechnology, USA, N, N, N, N, N, N, N, N
+GMAB, Genmab A/S, NMS,Biotechnology, USA, N, N, N, N, N, N, N, N
+GRCL, Gracell Biotechnologies Inc, NMS,Biotechnology, USA, N, N, N, N, N, N, N, N
+HCM, HUTCHMED (China) Limited, NMS,Biotechnology, USA, N, N, N, N, N, N, N, N
+HGEN, Humanigen Inc, NMS,Biotechnology, USA, N, N, N, N, N, N, N, N
+IMAB, I-Mab, NMS,Biotechnology, USA, N, N, N, N, N, N, N, N
+IMCR, Immunocore Holdings plc, NMS,Biotechnology, USA, N, N, N, N, N, N, N, N
+IONS, Ionis Pharmaceuticals Inc, NMS,Biotechnology, USA, N, N, N, N, N, N, N, N
+IOVA, Iovance Biotherapeutics Inc, NMS,Biotechnology, USA, N, N, N, N, N, N, N, N
+JAZZ, Jazz Pharmaceuticals plc, NMS,Biotechnology, USA, N, N, N, N, N, N, N, N
+LEGN, Legend Biotech Corporation, NMS,Biotechnology, USA, N, N, N, N, N, N, N, N
+MNMD, Mind Medicine (MindMed) Inc, NMS,Biotechnology, USA, N, N, N, N, N, N, N, N
+MOR, MorphoSys AG, NMS,Biotechnology, USA, N, N, N, N, N, N, N, N
+MRVI, Maravai LifeSciences Holdings Inc, NMS,Biotechnology, USA, N, N, N, N, N, N, N, N
+NOVN, Novan Inc, NMS,Biotechnology, USA, N, N, N, N, N, N, N, N
+OCGN, Ocugen Inc, NMS,Biotechnology, USA, N, N, N, N, N, N, N, N
+PRTC, PureTech Health plc, NMS,Biotechnology, USA, N, N, N, N, N, N, N, N
+RETA, Reata Pharmaceuticals Inc, NMS,Biotechnology, USA, N, N, N, N, N, N, N, N
+RPTX, Repare Therapeutics Inc, NMS,Biotechnology, USA, N, N, N, N, N, N, N, N
+RXRX, Recursion Pharmaceuticals Inc, NMS,Biotechnology, USA, N, N, N, N, N, N, N, N
+SANA, Sana Biotechnology Inc, NMS,Biotechnology, USA, N, N, N, N, N, N, N, N
+TIL, Instil Bio Inc, NMS,Biotechnology, USA, N, N, N, N, N, N, N, N
+UTHR, United Therapeutics Corporation, NMS,Biotechnology, USA, N, N, N, N, N, N, N, N
+ZEAL, Zealand Pharma A/S, NMS,Biotechnology, USA, N, N, N, N, N, N, N, N
+ZLAB, Zai Lab Limited, NMS,Biotechnology, USA, N, N, N, N, N, N, N, N
+FOX, Fox Corporation, NMS, Broadcasting, USA, N, N, N, N, N, N, N, N
+FWONA, Formula One Group, NMS, Broadcasting, USA, N, N, N, N, N, N, N, N
+FWONK, Formula One Group, NMS, Broadcasting, USA, N, N, N, N, N, N, N, N
+LSXMA, The Liberty SiriusXM Group, NMS, Broadcasting, USA, N, N, N, N, N, N, N, N
+LSXMB, The Liberty SiriusXM Group, NMS, Broadcasting, USA, N, N, N, N, N, N, N, N
+LSXMK, The Liberty SiriusXM Group, NMS, Broadcasting, USA, N, N, N, N, N, N, N, N
+SWIM, Latham Group Inc, NMS, Building Products & Equipment, USA, N, N, N, N, N, N, N, N
+VIEW, View Inc, NMS, Building Products & Equipment, USA, N, N, N, N, N, N, N, N
+FRHC, Freedom Holding Corp, NMS, Capital Markets, USA, N, N, N, N, N, N, N, N
+TIGR, UP Fintech Holding Limited, NMS, Capital Markets, USA, N, N, N, N, N, N, N, N
+TW, Tradeweb Markets Inc, NMS, Capital Markets, USA, N, N, N, N, N, N, N, N
+XP, XP Inc, NMS, Capital Markets, USA, N, N, N, N, N, N, N, N
+MEOH, Methanex Corporation, NMS, Chemicals, USA, N, N, N, N, N, N, N, N
+ZY, Zymergen Inc, NMS, Chemicals, USA, N, N, N, N, N, N, N, N
+COMM, CommScope Holding Company Inc, NMS, Communication Equipment, USA, N, N, N, N, N, N, N, N
+ERIC, Telefonaktiebolaget LM Ericsson (publ), NMS, Communication Equipment, USA, N, N, N, N, N, N, N, N
+LITE, Lumentum Holdings Inc, NMS, Communication Equipment, USA, N, N, N, N, N, N, N, N
+SATS, EchoStar Corporation, NMS, Communication Equipment, USA, N, N, N, N, N, N, N, N
+CAN, Canaan Inc, NMS, Computer Hardware, USA, N, N, N, N, N, N, N, N
+CRCT, Cricut Inc, NMS, Computer Hardware, USA, N, N, N, N, N, N, N, N
+LOGI, Logitech International SA, NMS, Computer Hardware, USA, N, N, N, N, N, N, N, N
+NNDM, Nano Dimension Ltd, NMS, Computer Hardware, USA, N, N, N, N, N, N, N, N
+LPRO, Open Lending Corporation, NMS, Credit Services, USA, N, N, N, N, N, N, N, N
+LX, LexinFintech Holdings Ltd, NMS, Credit Services, USA, N, N, N, N, N, N, N, N
+QFIN, 360 DigiTech Inc, NMS, Credit Services, USA, N, N, N, N, N, N, N, N
+UPST, Upstart Holdings Inc, NMS, Credit Services, USA, N, N, N, N, N, N, N, N
+BNGO, Bionano Genomics Inc, NMS, Diagnostics & Research, USA, N, N, N, N, N, N, N, N
+BNR, Burning Rock Biotech Limited, NMS, Diagnostics & Research, USA, N, N, N, N, N, N, N, N
+EXAS, Exact Sciences Corporation, NMS, Diagnostics & Research, USA, N, N, N, N, N, N, N, N
+GH, Guardant Health Inc, NMS, Diagnostics & Research, USA, N, N, N, N, N, N, N, N
+GTH, Genetron Holdings Limited, NMS, Diagnostics & Research, USA, N, N, N, N, N, N, N, N
+ICLR, ICON Public Limited Company, NMS, Diagnostics & Research, USA, N, N, N, N, N, N, N, N
+OLK, Olink Holding AB (publ), NMS, Diagnostics & Research, USA, N, N, N, N, N, N, N, N
+QDEL, Quidel Corporation, NMS, Diagnostics & Research, USA, N, N, N, N, N, N, N, N
+RNLX, Renalytix AI plc, NMS, Diagnostics & Research, USA, N, N, N, N, N, N, N, N
+SHC, Sotera Health Company, NMS, Diagnostics & Research, USA, N, N, N, N, N, N, N, N
+SYNH, Syneos Health Inc, NMS, Diagnostics & Research, USA, N, N, N, N, N, N, N, N
+GRFS, Grifols SA, NMS, Drug Manufacturers—General, USA, N, N, N, N, N, N, N, N
+CGC, Canopy Growth Corporation, NMS, Drug Manufacturers—Specialty & Generic, USA, N, N, N, N, N, N, N, N
+CRON, Cronos Group Inc, NMS, Drug Manufacturers—Specialty & Generic, USA, N, N, N, N, N, N, N, N
+PPD, PPD Inc, NMS, Drug Manufacturers—Specialty & Generic, USA, N, N, N, N, N, N, N, N
+SNDL, Sundial Growers Inc, NMS, Drug Manufacturers—Specialty & Generic, USA, N, N, N, N, N, N, N, N
+VTRS, Viatris Inc, NMS, Drug Manufacturers—Specialty & Generic, USA, N, N, N, N, N, N, N, N
+AFYA, Afya Limited, NMS, Education & Training Services, USA, N, N, N, N, N, N, N, N
+ARCE, Arco Platform Limited, NMS, Education & Training Services, USA, N, N, N, N, N, N, N, N
+LOPE, Grand Canyon Education Inc, NMS, Education & Training Services, USA, N, N, N, N, N, N, N, N
+EOSE, Eos Energy Enterprises Inc, NMS, Electrical Equipment & Parts, USA, N, N, N, N, N, N, N, N
+BILI, Bilibili Inc, NMS, Electronic Gaming & Multimedia, USA, N, N, N, N, N, N, N, N
+PLTK, Playtika Holding Corp, NMS, Electronic Gaming & Multimedia, USA, N, N, N, N, N, N, N, N
+DISCA, Discovery Inc, NMS, Entertainment, USA, N, N, N, N, N, N, N, N
+DISCB, Discovery Inc, NMS, Entertainment, USA, N, N, N, N, N, N, N, N
+LBRDA, Liberty Broadband Corporation, NMS, Entertainment, USA, N, N, N, N, N, N, N, N
+LBTYB, Liberty Global plc, NMS, Entertainment, USA, N, N, N, N, N, N, N, N
+LBTYK, Liberty Global plc, NMS, Entertainment, USA, N, N, N, N, N, N, N, N
+ROKU, Roku Inc, NMS, Entertainment, USA, N, N, N, N, N, N, N, N
+VIAC, ViacomCBS Inc, NMS, Entertainment, USA, N, N, N, N, N, N, N, N
+VIACA, ViacomCBS Inc, NMS, Entertainment, USA, N, N, N, N, N, N, N, N
+WMG, Warner Music Group Corp, NMS, Entertainment, USA, N, N, N, N, N, N, N, N
+APPH, AppHarvest Inc, NMS, Farm Products, USA, N, N, N, N, N, N, N, N
+DKNG, DraftKings Inc, NMS, Gambling, USA, N, N, N, N, N, N, N, N
+GNOG, Golden Nugget Online Gaming Inc, NMS, Gambling, USA, N, N, N, N, N, N, N, N
+SSRM, SSR Mining Inc, NMS, Gold, USA, N, N, N, N, N, N, N, N
+ARKO, Arko Corp, NMS, Grocery Stores, USA, N, N, N, N, N, N, N, N
+CASY," ""Caseys General Stores Inc""", NMS, Grocery Stores, USA, N, N, N, N, N, N, N, N
+GO, Grocery Outlet Holding Corp, NMS, Grocery Stores, USA, N, N, N, N, N, N, N, N
+CHNG, Change Healthcare Inc, NMS, Health Information Services, USA, N, N, N, N, N, N, N, N
+GDRX, GoodRx Holdings Inc, NMS, Health Information Services, USA, N, N, N, N, N, N, N, N
+PRVA, Privia Health Group Inc, NMS, Health Information Services, USA, N, N, N, N, N, N, N, N
+SY, So-Young International Inc, NMS, Health Information Services, USA, N, N, N, N, N, N, N, N
+TXG, 10x Genomics Inc, NMS, Health Information Services, USA, N, N, N, N, N, N, N, N
+ALHC, Alignment Healthcare Inc, NMS, Healthcare Plans, USA, N, N, N, N, N, N, N, N
+CLOV, Clover Health Investments Corp, NMS, Healthcare Plans, USA, N, N, N, N, N, N, N, N
+LESL," ""Leslies Inc""", NMS, Home Improvement Retail, USA, N, N, N, N, N, N, N, N
+AFRM, Affirm Holdings Inc, NMS, Information Technology Services, USA, N, N, N, N, N, N, N, N
+CD, Chindata Group Holdings Limited, NMS, Information Technology Services, USA, N, N, N, N, N, N, N, N
+CNXC, Concentrix Corporation, NMS, Information Technology Services, USA, N, N, N, N, N, N, N, N
+GDS, GDS Holdings Limited, NMS, Information Technology Services, USA, N, N, N, N, N, N, N, N
+SABR, Sabre Corporation, NMS, Information Technology Services, USA, N, N, N, N, N, N, N, N
+ERIE, Erie Indemnity Company, NMS, Insurance Brokers, USA, N, N, N, N, N, N, N, N
+GOCO, GoHealth Inc, NMS, Insurance Brokers, USA, N, N, N, N, N, N, N, N
+BHF, Brighthouse Financial Inc, NMS, Insurance—Life, USA, N, N, N, N, N, N, N, N
+MILE, Metromile Inc, NMS, Insurance—Property & Casualty, USA, N, N, N, N, N, N, N, N
+ROOT, Root Inc, NMS, Insurance—Property & Casualty, USA, N, N, N, N, N, N, N, N
+ABNB, Airbnb Inc, NMS, Internet Content & Information, USA, N, N, N, N, N, N, N, N
+DOYU, DouYu International Holdings Limited, NMS, Internet Content & Information, USA, N, N, N, N, N, N, N, N
+IQ, iQIYI Inc, NMS, Internet Content & Information, USA, N, N, N, N, N, N, N, N
+TRVG, trivago NV, NMS, Internet Content & Information, USA, N, N, N, N, N, N, N, N
+UXIN, Uxin Limited, NMS, Internet Content & Information, USA, N, N, N, N, N, N, N, N
+DADA, Dada Nexus Limited, NMS, Internet Retail, USA, N, N, N, N, N, N, N, N
+OZON, Ozon Holdings PLC, NMS, Internet Retail, USA, N, N, N, N, N, N, N, N
+PDD, Pinduoduo Inc, NMS, Internet Retail, USA, N, N, N, N, N, N, N, N
+POSH, Poshmark Inc, NMS, Internet Retail, USA, N, N, N, N, N, N, N, N
+QRTEA, Qurate Retail Inc, NMS, Internet Retail, USA, N, N, N, N, N, N, N, N
+QRTEB, Qurate Retail Inc, NMS, Internet Retail, USA, N, N, N, N, N, N, N, N
+TDUP, ThredUp Inc, NMS, Internet Retail, USA, N, N, N, N, N, N, N, N
+WISH, ContextLogic Inc, NMS, Internet Retail, USA, N, N, N, N, N, N, N, N
+PLBY, PLBY Group Inc, NMS, Leisure, USA, N, N, N, N, N, N, N, N
+HTHT, Huazhu Group Limited, NMS, Lodging, USA, N, N, N, N, N, N, N, N
+AVAH, Aveanna Healthcare Holdings Inc, NMS, Medical Care Facilities, USA, N, N, N, N, N, N, N, N
+CMPS, COMPASS Pathways plc, NMS, Medical Care Facilities, USA, N, N, N, N, N, N, N, N
+ESTA, Establishment Labs Holdings Inc, NMS, Medical Devices, USA, N, N, N, N, N, N, N, N
+IART, Integra LifeSciences Holdings Corporation, NMS, Medical Devices, USA, N, N, N, N, N, N, N, N
+INMD, InMode Ltd, NMS, Medical Devices, USA, N, N, N, N, N, N, N, N
+NARI, Inari Medical Inc, NMS, Medical Devices, USA, N, N, N, N, N, N, N, N
+NNOX, Nano-X Imaging Ltd, NMS, Medical Devices, USA, N, N, N, N, N, N, N, N
+PODD, Insulet Corporation, NMS, Medical Devices, USA, N, N, N, N, N, N, N, N
+SDC, SmileDirectClub Inc, NMS, Medical Devices, USA, N, N, N, N, N, N, N, N
+TMCI, Treace Medical Concepts Inc, NMS, Medical Devices, USA, N, N, N, N, N, N, N, N
+MASI, Masimo Corporation, NMS, Medical Instruments & Supplies, USA, N, N, N, N, N, N, N, N
+NVCR, NovoCure Limited, NMS, Medical Instruments & Supplies, USA, N, N, N, N, N, N, N, N
+RGEN, Repligen Corporation, NMS, Medical Instruments & Supplies, USA, N, N, N, N, N, N, N, N
+CDEV, Centennial Resource Development Inc, NMS, Oil & Gas E&P, USA, N, N, N, N, N, N, N, N
+XOG, Extraction Oil & Gas Inc, NMS, Oil & Gas E&P, USA, N, N, N, N, N, N, N, N
+ALTM, Altus Midstream Company, NMS, Oil & Gas Midstream, USA, N, N, N, N, N, N, N, N
+RTLR, Rattler Midstream LP, NMS, Oil & Gas Midstream, USA, N, N, N, N, N, N, N, N
+PLL, Piedmont Lithium Limited, NMS, Other Industrial Metals & Mining, USA, N, N, N, N, N, N, N, N
+BYND, Beyond Meat Inc, NMS, Packaged Foods, USA, N, N, N, N, N, N, N, N
+STKL, SunOpta Inc, NMS, Packaged Foods, USA, N, N, N, N, N, N, N, N
+TTCF, Tattooed Chef Inc, NMS, Packaged Foods, USA, N, N, N, N, N, N, N, N
+REYN, Reynolds Consumer Products Inc, NMS, Packaging & Containers, USA, N, N, N, N, N, N, N, N
+DSEY, Diversey Holdings Ltd, NMS, Personal Services, USA, N, N, N, N, N, N, N, N
+EM, Smart Share Global Limited, NMS, Personal Services, USA, N, N, N, N, N, N, N, N
+FTDR, frontdoor inc, NMS, Personal Services, USA, N, N, N, N, N, N, N, N
+PCT, PureCycle Technologies Inc, NMS, Pollution & Treatment Controls, USA, N, N, N, N, N, N, N, N
+FSV, FirstService Corporation, NMS, Real Estate Services, USA, N, N, N, N, N, N, N, N
+OPEN, Opendoor Technologies Inc, NMS, Real Estate Services, USA, N, N, N, N, N, N, N, N
+DOOO, BRP Inc, NMS, Recreational Vehicles, USA, N, N, N, N, N, N, N, N
+DFH, Dream Finders Homes Inc, NMS, Residential Construction, USA, N, N, N, N, N, N, N, N
+MLCO, Melco Resorts & Entertainment Limited, NMS, Resorts & Casinos, USA, N, N, N, N, N, N, N, N
+PLYA, Playa Hotels & Resorts NV, NMS, Resorts & Casinos, USA, N, N, N, N, N, N, N, N
+PLAY," ""Dave & Busters Entertainment Inc""", NMS, Restaurants, USA, N, N, N, N, N, N, N, N
+CGNX, Cognex Corporation, NMS, Scientific & Technical Instruments, USA, N, N, N, N, N, N, N, N
+COHR, Coherent Inc, NMS, Scientific & Technical Instruments, USA, N, N, N, N, N, N, N, N
+VLDR, Velodyne Lidar Inc, NMS, Scientific & Technical Instruments, USA, N, N, N, N, N, N, N, N
+ACMR, ACM Research Inc, NMS, Semiconductor Equipment & Materials, USA, N, N, N, N, N, N, N, N
+CAMT, Camtek Ltd, NMS, Semiconductor Equipment & Materials, USA, N, N, N, N, N, N, N, N
+OLED, Universal Display Corporation, NMS, Semiconductor Equipment & Materials, USA, N, N, N, N, N, N, N, N
+ALGM, Allegro MicroSystems Inc, NMS, Semiconductors, USA, N, N, N, N, N, N, N, N
+IMOS, ChipMOS TECHNOLOGIES INC, NMS, Semiconductors, USA, N, N, N, N, N, N, N, N
+ON, ON Semiconductor Corporation, NMS, Semiconductors, USA, N, N, N, N, N, N, N, N
+SIMO, Silicon Motion Technology Corporation, NMS, Semiconductors, USA, N, N, N, N, N, N, N, N
+PAAS, Pan American Silver Corp, NMS, Silver, USA, N, N, N, N, N, N, N, N
+ACVA, ACV Auctions Inc, NMS, Software—Application, USA, N, N, N, N, N, N, N, N
+ALKT, Alkami Technology Inc, NMS, Software—Application, USA, N, N, N, N, N, N, N, N
+API, Agora Inc, NMS, Software—Application, USA, N, N, N, N, N, N, N, N
+APP, AppLovin Corporation, NMS, Software—Application, USA, N, N, N, N, N, N, N, N
+BIGC, BigCommerce Holdings Inc, NMS, Software—Application, USA, N, N, N, N, N, N, N, N
+BMBL, Bumble Inc, NMS, Software—Application, USA, N, N, N, N, N, N, N, N
+BSY, Bentley Systems Incorporated, NMS, Software—Application, USA, N, N, N, N, N, N, N, N
+BTRS, BTRS Holdings Inc, NMS, Software—Application, USA, N, N, N, N, N, N, N, N
+CDK, CDK Global Inc, NMS, Software—Application, USA, N, N, N, N, N, N, N, N
+COIN, Coinbase Global Inc, NMS, Software—Application, USA, N, N, N, N, N, N, N, N
+COUP, Coupa Software Incorporated, NMS, Software—Application, USA, N, N, N, N, N, N, N, N
+DCBO, Docebo Inc, NMS, Software—Application, USA, N, N, N, N, N, N, N, N
+DDOG, Datadog Inc, NMS, Software—Application, USA, N, N, N, N, N, N, N, N
+DOCU, DocuSign Inc, NMS, Software—Application, USA, N, N, N, N, N, N, N, N
+DOMO, Domo Inc, NMS, Software—Application, USA, N, N, N, N, N, N, N, N
+DSGX, The Descartes Systems Group Inc, NMS, Software—Application, USA, N, N, N, N, N, N, N, N
+EVBG, Everbridge Inc, NMS, Software—Application, USA, N, N, N, N, N, N, N, N
+FROG, JFrog Ltd, NMS, Software—Application, USA, N, N, N, N, N, N, N, N
+IDEX, Ideanomics Inc, NMS, Software—Application, USA, N, N, N, N, N, N, N, N
+JAMF, Jamf Holding Corp, NMS, Software—Application, USA, N, N, N, N, N, N, N, N
+KARO, Karooooo Ltd, NMS, Software—Application, USA, N, N, N, N, N, N, N, N
+KC, Kingsoft Cloud Holdings Limited, NMS, Software—Application, USA, N, N, N, N, N, N, N, N
+LAZR, Luminar Technologies Inc, NMS, Software—Application, USA, N, N, N, N, N, N, N, N
+MCFE, McAfee Corp, NMS, Software—Application, USA, N, N, N, N, N, N, N, N
+NATI, National Instruments Corporation, NMS, Software—Application, USA, N, N, N, N, N, N, N, N
+NCNO, nCino Inc, NMS, Software—Application, USA, N, N, N, N, N, N, N, N
+NICE, NICE Ltd, NMS, Software—Application, USA, N, N, N, N, N, N, N, N
+NUAN, Nuance Communications Inc, NMS, Software—Application, USA, N, N, N, N, N, N, N, N
+OTEX, Open Text Corporation, NMS, Software—Application, USA, N, N, N, N, N, N, N, N
+PCTY, Paylocity Holding Corporation, NMS, Software—Application, USA, N, N, N, N, N, N, N, N
+PRCH, Porch Group Inc, NMS, Software—Application, USA, N, N, N, N, N, N, N, N
+PUBM, PubMatic Inc, NMS, Software—Application, USA, N, N, N, N, N, N, N, N
+QADB, QAD Inc, NMS, Software—Application, USA, N, N, N, N, N, N, N, N
+RIOT, Riot Blockchain Inc, NMS, Software—Application, USA, N, N, N, N, N, N, N, N
+STNE, StoneCo Ltd, NMS, Software—Application, USA, N, N, N, N, N, N, N, N
+TTD, The Trade Desk Inc, NMS, Software—Application, USA, N, N, N, N, N, N, N, N
+VERX, Vertex Inc, NMS, Software—Application, USA, N, N, N, N, N, N, N, N
+XM, Qualtrics International Inc, NMS, Software—Application, USA, N, N, N, N, N, N, N, N
+ZI, ZoomInfo Technologies Inc, NMS, Software—Application, USA, N, N, N, N, N, N, N, N
+CRWD, CrowdStrike Holdings Inc, NMS, Software—Infrastructure, USA, N, N, N, N, N, N, N, N
+DBX, Dropbox Inc, NMS, Software—Infrastructure, USA, N, N, N, N, N, N, N, N
+MDB, MongoDB Inc, NMS, Software—Infrastructure, USA, N, N, N, N, N, N, N, N
+NLOK, NortonLifeLock Inc, NMS, Software—Infrastructure, USA, N, N, N, N, N, N, N, N
+NTNX, Nutanix Inc, NMS, Software—Infrastructure, USA, N, N, N, N, N, N, N, N
+OKTA, Okta Inc, NMS, Software—Infrastructure, USA, N, N, N, N, N, N, N, N
+OPRA, Opera Limited, NMS, Software—Infrastructure, USA, N, N, N, N, N, N, N, N
+PAYA, Paya Holdings Inc, NMS, Software—Infrastructure, USA, N, N, N, N, N, N, N, N
+TLND, Talend SA, NMS, Software—Infrastructure, USA, N, N, N, N, N, N, N, N
+ZS, Zscaler Inc, NMS, Software—Infrastructure, USA, N, N, N, N, N, N, N, N
+SHLS, Shoals Technologies Group Inc, NMS, Solar, USA, N, N, N, N, N, N, N, N
+MIDD, The Middleby Corporation, NMS, Specialty Industrial Machinery, USA, N, N, N, N, N, N, N, N
+NDSN, Nordson Corporation, NMS, Specialty Industrial Machinery, USA, N, N, N, N, N, N, N, N
+BLNK, Blink Charging Co, NMS, Specialty Retail, USA, N, N, N, N, N, N, N, N
+BWMX, Betterware de Mexico SAB de CV, NMS, Specialty Retail, USA, N, N, N, N, N, N, N, N
+HHR, HeadHunter Group PLC, NMS, Staffing & Employment Services, USA, N, N, N, N, N, N, N, N
+KELYB, Kelly Services Inc, NMS, Staffing & Employment Services, USA, N, N, N, N, N, N, N, N
+TIGO, Millicom International Cellular SA, NMS, Telecom Services, USA, N, N, N, N, N, N, N, N
+VEON, VEON Ltd, NMS, Telecom Services, USA, N, N, N, N, N, N, N, N
+VOD, Vodafone Group Plc, NMS, Telecom Services, USA, N, N, N, N, N, N, N, N
+ZM, Zoom Video Communications Inc, NMS, Telecom Services, USA, N, N, N, N, N, N, N, N
+TCOM, Tripcom Group Limited, NMS, Travel Services, USA, N, N, N, N, N, N, N, N
+TSP, TuSimple Holdings Inc, NMS, Trucking, USA, N, N, N, N, N, N, N, N
+MNTK, Montauk Renewables Inc, NMS, Utilities—Diversified, USA, N, N, N, N, N, N, N, N
+NFE, New Fortress Energy Inc, NMS, Utilities—Regulated Gas, USA, N, N, N, N, N, N, N, N
+AY, Atlantica Sustainable Infrastructure plc, NMS, Utilities—Renewable, USA, N, N, N, N, N, N, N, N
+ACB, Aurora Cannabis Inc, NMS,Cannabis, USA, N, N, N, N, N, N, N, N
+TLRY, Tilray Inc, NMS,Cannabis, USA, N, N, N, N, N, N, N, N
+ZY,Zymergen Inc,NMS,Chemicals, USA, N, N, N, N, N, N, N, N

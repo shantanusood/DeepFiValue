@@ -83,6 +83,7 @@ def indicators_data(type):
 def quote(filter, tickers):
     ret = s.main(filter, tickers)
     ret_dict = {}
+    dates = []
     ret_dict_sync = {}
     ret_dict_sync_tm = {}
     if isinstance(ret, pd.DataFrame):
@@ -91,6 +92,46 @@ def quote(filter, tickers):
             for x in ret_dict.keys():
                 ret_dict_sync[str(x)] = ret_dict[x][0]
             ret_dict_sync_tm[str(datetime.today().strftime('%m/%d/%Y'))] = ret_dict_sync
+        elif filter == 'inside':
+            ret_dict = ret.to_dict()
+            for x in ret_dict['FILE DATE']:
+                dates.append(ret_dict['FILE DATE'][x])
+            ret_dict.pop('FILE DATE')
+            dur = []
+            for y in ret_dict.keys():
+                dur.append(y)
+                ret_dict_sync['Date'] = dur
+            count = 0
+            name = []
+            title = []
+            date = []
+            trans = []
+            share = []
+            price = []
+            amt = []
+            for x in dates:
+                name.append(ret_dict['INSIDER NAME'][count])
+                title.append(ret_dict['TITLE'][count])
+                date.append(ret_dict['DATE'][count])
+                trans.append(ret_dict['TRANSATION'][count])
+                share.append(ret_dict['SHARE'][count])
+                price.append(ret_dict['PRICE'][count])
+                amt.append(ret_dict['AMOUNT'][count])
+                count = count + 1
+            final = []
+            count_ = 0
+            for y in dates:
+                final.append(name[count_])
+                final.append(title[count_])
+                final.append(date[count_])
+                final.append(trans[count_])
+                final.append(share[count_])
+                final.append(price[count_])
+                final.append(amt[count_])
+                ret_dict_sync[y] = final
+                final = []
+                count_ = count_ + 1
+            ret_dict_sync_tm = ret_dict_sync
         else:
             for x in ret_dict['Duration'].keys():
                 for y in ret_dict.keys():
@@ -259,15 +300,15 @@ def data_sync_dump(parent, subsector, ticker, type):
                 if row[0] == ticker:
                     if type == 'quote':
                         row[5] = str(datetime.today().strftime('%m/%d/%Y'))
-                    elif type == 'fin':
+                    elif type == 'ks':
                         row[6] = str(datetime.today().strftime('%m/%d/%Y'))
-                    elif type == 'bs':
+                    elif type == 'fin':
                         row[7] = str(datetime.today().strftime('%m/%d/%Y'))
-                    elif type == 'cf':
+                    elif type == 'bs':
                         row[8] = str(datetime.today().strftime('%m/%d/%Y'))
-                    elif type == 'inside':
+                    elif type == 'cf':
                         row[9] = str(datetime.today().strftime('%m/%d/%Y'))
-                    elif type == 'inst':
+                    elif type == 'inside':
                         row[10] = str(datetime.today().strftime('%m/%d/%Y'))
                     elif type == 'bonds':
                         row[11] = str(datetime.today().strftime('%m/%d/%Y'))
@@ -312,15 +353,15 @@ def data_sync_update(parent, subsector, ticker, type):
                 if row[0] == ticker:
                     if type == 'quote':
                         row[5] = str(datetime.today().strftime('%m/%d/%Y'))
-                    elif type == 'fin':
+                    elif type == 'ks':
                         row[6] = str(datetime.today().strftime('%m/%d/%Y'))
-                    elif type == 'bs':
+                    elif type == 'fin':
                         row[7] = str(datetime.today().strftime('%m/%d/%Y'))
-                    elif type == 'cf':
+                    elif type == 'bs':
                         row[8] = str(datetime.today().strftime('%m/%d/%Y'))
-                    elif type == 'inside':
+                    elif type == 'cf':
                         row[9] = str(datetime.today().strftime('%m/%d/%Y'))
-                    elif type == 'inst':
+                    elif type == 'inside':
                         row[10] = str(datetime.today().strftime('%m/%d/%Y'))
                     elif type == 'bonds':
                         row[11] = str(datetime.today().strftime('%m/%d/%Y'))
@@ -472,15 +513,15 @@ def data_sync_dump_in(parent, subsector, ticker, type, data):
                 if row[0] == ticker:
                     if type == 'quote':
                         row[5] = str(datetime.today().strftime('%m/%d/%Y'))
-                    elif type == 'fin':
+                    elif type == 'ks':
                         row[6] = str(datetime.today().strftime('%m/%d/%Y'))
-                    elif type == 'bs':
+                    elif type == 'fin':
                         row[7] = str(datetime.today().strftime('%m/%d/%Y'))
-                    elif type == 'cf':
+                    elif type == 'bs':
                         row[8] = str(datetime.today().strftime('%m/%d/%Y'))
-                    elif type == 'inside':
+                    elif type == 'cf':
                         row[9] = str(datetime.today().strftime('%m/%d/%Y'))
-                    elif type == 'inst':
+                    elif type == 'inside':
                         row[10] = str(datetime.today().strftime('%m/%d/%Y'))
                     elif type == 'bonds':
                         row[11] = str(datetime.today().strftime('%m/%d/%Y'))
@@ -524,15 +565,15 @@ def data_sync_update_in(parent, subsector, ticker, type, data):
                 if row[0] == ticker:
                     if type == 'quote':
                         row[5] = str(datetime.today().strftime('%m/%d/%Y'))
-                    elif type == 'fin':
+                    elif type == 'ks':
                         row[6] = str(datetime.today().strftime('%m/%d/%Y'))
-                    elif type == 'bs':
+                    elif type == 'fin':
                         row[7] = str(datetime.today().strftime('%m/%d/%Y'))
-                    elif type == 'cf':
+                    elif type == 'bs':
                         row[8] = str(datetime.today().strftime('%m/%d/%Y'))
-                    elif type == 'inside':
+                    elif type == 'cf':
                         row[9] = str(datetime.today().strftime('%m/%d/%Y'))
-                    elif type == 'inst':
+                    elif type == 'inside':
                         row[10] = str(datetime.today().strftime('%m/%d/%Y'))
                     elif type == 'bonds':
                         row[11] = str(datetime.today().strftime('%m/%d/%Y'))

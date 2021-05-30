@@ -1,3 +1,5 @@
+from src.engine.types.DivDiscounted import DivDiscounted
+from src.engine.types.IntValCustom import IntValCustom
 from src.engine.types.Ratios import Ratios
 from src.engine.types.Basics import Basics
 from src.engine.types.IncomeChanges import IncomeChanges
@@ -30,5 +32,9 @@ class Decide:
             return CashFlowChanges(self.parent, self.subsector, self.data).final()
         elif self.type == 'discountedcashflow':
             return DiscountedCashFlow(self.parent, self.subsector, self.data).final()
+        elif self.type == 'divdiscounted':
+            return DivDiscounted(self.parent, self.subsector, self.data).final()
+        elif self.type == 'intValCustom':
+            return IntValCustom(self.parent, self.subsector, self.data).final()
         else:
             return "[]"

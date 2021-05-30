@@ -192,6 +192,7 @@ Advertising Agencies,Communications
 CATV Systems,Communications
 Appliances,Consumer Discretionary
 REIT - Industrial,Real Estate
+REIT - Mortgage,Real Estate
 Computers Wholesale,Consumer Discretionary
 Cement,Materials
 Publishing - Periodicals,Communications
@@ -213,6 +214,11 @@ Internet Service Providers,Communications
 Toys & Games,Consumer Discretionary
 Medical Practitioners,Health Care
 Wholesale Other,Consumer Discretionary
+Banks - Regional,Financials
+Specialty Industrial Machinery,Industrials
+Solar,Utilities
+Cannabis,Consumer Discretionary
+Internet Retial,Consumer Discretionary
 CCI,Indicators
 Jobless,Indicators
 SP500 PE,Indicators

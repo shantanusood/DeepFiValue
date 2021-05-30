@@ -8,18 +8,27 @@ def getFinancialLabels(soup):
     return labels_text
 
 def getHtml(type, ticker):
-    req = r.get(linkList(type, ticker))
-    return (req.status_code, req.text)
+    if "html" in linkList(type, ticker):
+        try:
+            return (200, open(linkList(type, ticker), 'r').read())
+        except:
+            return (500, "")
+    else:
+        req = r.get(linkList(type, ticker))
+        return (req.status_code, req.text)
 
 def linkList(type, ticker):
     if type == 'financial':
-        return "https://finance.yahoo.com/quote/{0}/financials?p={0}".format(ticker)
+        return "C://Users//13476//OneDrive//Desktop//Data Archiving and BackUp//Work//Code Repo//S1Comp//DataDownload//data//fin//"+ticker+".html"
+        #return "https://finance.yahoo.com/quote/{0}/financials?p={0}".format(ticker)
     elif type == 'quote':
         return "https://finance.yahoo.com/quote/{0}?p={0}".format(ticker)
     elif type == "cf":
-        return "https://finance.yahoo.com/quote/{0}/cash-flow?p={0}".format(ticker)
+        return "C://Users//13476//OneDrive//Desktop//Data Archiving and BackUp//Work//Code Repo//S1Comp//DataDownload//data//cf//"+ticker+".html"
+        #return "https://finance.yahoo.com/quote/{0}/cash-flow?p={0}".format(ticker)
     elif type == "bs":
-        return "https://finance.yahoo.com/quote/{0}/balance-sheet?p={0}".format(ticker)
+        return "C://Users//13476//OneDrive//Desktop//Data Archiving and BackUp//Work//Code Repo//S1Comp//DataDownload//data//bs//"+ticker+".html"
+        #return "https://finance.yahoo.com/quote/{0}/balance-sheet?p={0}".format(ticker)
     elif type == "perf":
         return "https://finance.yahoo.com/quote/{0}/performance?p={0}".format(ticker)
     elif type == "hist":
@@ -30,6 +39,11 @@ def linkList(type, ticker):
         return "https://finance.yahoo.com/quote/{0}/risk?p={0}".format(ticker)
     elif type == "options":
         return "https://finance.yahoo.com/quote/{0}/options?p={0}".format(ticker)
+    elif type == "ks":
+        return "C://Users//13476//OneDrive//Desktop//Data Archiving and BackUp//Work//Code Repo//S1Comp//DataDownload//data//ks//"+ticker+".html"
+        #return "https://finance.yahoo.com/quote/{0}/key-statistics?p={0}".format(ticker)
+    elif type == "inside":
+        return "http://insiderbuyingselling.com/?t={0}".format(ticker)
 
 def calendar(start_date, end_date, target_date, offset):
     return "https://finance.yahoo.com/calendar/earnings?from={0}&to={1}&day={2}&offset={3}&size=100".format(start_date, end_date, target_date, offset)

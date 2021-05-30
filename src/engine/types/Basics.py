@@ -21,6 +21,7 @@ class Basics:
         self.price()
         self.pt()
         self.up()
+        self.pMargin()
         return str(self.data).replace("'", "\"")
 
     def mc(self):
@@ -191,8 +192,41 @@ class Basics:
                         target = float(p_e[str(list(p_e.keys())[0])]['1y Target Est'].replace(",", ""))
                         price = float(p_e[str(list(p_e.keys())[0])]['value'].replace(",", ""))
                         upside = round(((target - price)/price)*100, 2)
-                        self.data[count]['basics']['upside'] = str(upside)
+                        if upside>300:
+                            raise Exception("Upaside over 300% - Invalid")
+                        else:
+                            self.data[count]['basics']['upside'] = str(upside)
             except:
                 self.data[count]['basics']['upside'] = '-999'
+                pass
+            count = count + 1
+
+    def pMargin(self):
+        count = 0
+        parent_t = ""
+        for tick in self.data:
+            if self.parent == "Customs":
+                if os.path.isfile('./data/tickers/Categories.csv'):
+                    get_parent = pd.read_csv('./data/tickers/Categories.csv')
+                    isSubsector = get_parent['Subsector'] == tick['Category']
+                    parentSect = get_parent[isSubsector]
+                    parent_t = str(parentSect['ParentSector'].head(1).item())
+            else:
+                parent_t = self.parent
+            try:
+                p_e = Helpers.get_by_type(parent_t, tick['Category'], tick['Ticker'], "quote")
+                if "ERROR" in p_e:
+                    self.data[count]['basics']['pMargin'] = '-999'
+                else:
+                    if 'N/A' in p_e[str(list(p_e.keys())[0])]['Profit Margin ']:
+                        self.data[count]['basics']['pMargin'] = '-999'
+                    else:
+                        target = float(p_e[str(list(p_e.keys())[0])]['Profit Margin '].replace(",", "").replace("%", ""))
+                        if target>100:
+                            raise Exception("Profit margin over 100% - Invalid")
+                        else:
+                            self.data[count]['basics']['pMargin'] = str(target)
+            except:
+                self.data[count]['basics']['pMargin'] = '-999'
                 pass
             count = count + 1
