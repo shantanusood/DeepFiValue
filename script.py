@@ -7,6 +7,10 @@ import pandas as pd
 from data import tickers_list as tl
 import os.path
 from src.helpers import commons as cm
+from data import tickers_list as t
+import ends as e
+import json
+
 
 def main(filter, tickers):
     """
@@ -33,31 +37,68 @@ def main(filter, tickers):
            ------------------------------------------------------------------------------------------------------------------------------
     """
 
+    curData = ""
+    subsect = ""
+    parent = ""
+
+    if "_" not in str(tickers):
+        if os.path.isfile('./data/tickers/Stocks.csv'):
+            metadata = t.ticker_details("Stocks")
+            is_stock = metadata['Ticker'] == str(tickers)
+            metadata_stock = metadata[is_stock]
+            subsect = str(metadata_stock['Category'].to_json()).split(":")[1][:-1].replace("\"", "")
+        if os.path.isfile('./data/tickers/Categories.csv'):
+            metadata = t.ticker_details("Categories")
+            is_parent = metadata['Subsector'] == subsect
+            metadata_parent = metadata[is_parent]
+            parent = str(metadata_parent['ParentSector'].to_json()).split(":")[1][:-1].replace("\"", "")
+        try:
+            curData = e.data_get(parent, subsect, tickers, filter)
+            if "ERROR" in curData:
+                raise Exception("Error getting current data")
+        except:
+            pass
+
     if filter == 'quote':
         input = str(tickers)
         return q.getQuote(input)
     elif filter == 'fin':
         resp = cm.getHtml("financial", tickers)
         if resp[0] == 200:
-            df = f.getFinancialNumbers(resp[1])
-            pd.set_option('display.max_rows', 10, 'display.max_columns', 100)
+            tup = f.getFinancialNumbers(resp[1], curData)
+            df = tup[0]
+            if len(tup[1]) > 0:
+                try:
+                    e.data_sync_dump_in(parent, subsect, tickers, filter, json.loads(tup[1]))
+                except:
+                    pass
             return df
     elif filter == 'bs':
         resp = cm.getHtml("bs", tickers)
         if resp[0] == 200:
-            df = b.getBalanceSheet(resp[1])
-            pd.set_option('display.max_rows', 10, 'display.max_columns', 100)
+            tup = b.getBalanceSheet(resp[1], curData)
+            df = tup[0]
+            if len(tup[1]) > 0:
+                try:
+                    e.data_sync_dump_in(parent, subsect, tickers, filter, json.loads(tup[1]))
+                except:
+                    pass
             return df
     elif filter == 'cf':
         resp = cm.getHtml("cf", tickers)
-        if resp[0]:
-            df = c.getCashFlow(resp[1])
-            pd.set_option('display.max_rows', 10, 'display.max_columns', 100)
+        if resp[0] == 200:
+            tup = c.getCashFlow(resp[1], curData)
+            df = tup[0]
+            if len(tup[1]) > 0:
+                try:
+                    e.data_sync_dump_in(parent, subsect, tickers, filter, json.loads(tup[1]))
+                except:
+                    pass
             return df
     elif filter == 'ks':
         resp = cm.getHtml("ks", tickers)
         if resp[0]:
-            df = k.getKeyStats(resp[1])
+            df = k.getKeyStats(resp[1], curData)
             pd.set_option('display.max_rows', 10, 'display.max_columns', 100)
             return df
     elif filter == 'inside':

@@ -1,4 +1,3 @@
-from src.engine.types.DivDiscounted import DivDiscounted
 from src.engine.types.IntValCustom import IntValCustom
 from src.engine.types.Ratios import Ratios
 from src.engine.types.Basics import Basics
@@ -19,6 +18,16 @@ class Decide:
         self.type = type
         self.data = data
 
+    def lineItems(self):
+        if self.type == 'incomechanges':
+            return IncomeChanges(self.parent, self.subsector, self.data).lines()
+        elif self.type == 'balancesheetchanges':
+            return BalanceSheetChanges(self.parent, self.subsector, self.data).lines()
+        elif self.type == 'cashflowchanges':
+            return CashFlowChanges(self.parent, self.subsector, self.data).lines()
+        elif self.type == 'ratios':
+            return Ratios(self.parent, self.subsector, self.data).lines()
+
     def final(self):
         if self.type == 'ratios':
             return Ratios(self.parent, self.subsector, self.data).final()
@@ -32,8 +41,6 @@ class Decide:
             return CashFlowChanges(self.parent, self.subsector, self.data).final()
         elif self.type == 'discountedcashflow':
             return DiscountedCashFlow(self.parent, self.subsector, self.data).final()
-        elif self.type == 'divdiscounted':
-            return DivDiscounted(self.parent, self.subsector, self.data).final()
         elif self.type == 'intValCustom':
             return IntValCustom(self.parent, self.subsector, self.data).final()
         else:

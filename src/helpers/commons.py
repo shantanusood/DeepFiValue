@@ -19,16 +19,16 @@ def getHtml(type, ticker):
 
 def linkList(type, ticker):
     if type == 'financial':
-        return "C://Users//13476//OneDrive//Desktop//Data Archiving and BackUp//Work//Code Repo//S1Comp//DataDownload//data//fin//"+ticker+".html"
-        #return "https://finance.yahoo.com/quote/{0}/financials?p={0}".format(ticker)
+        #return "C://Users//13476//OneDrive//Desktop//Data Archiving and BackUp//Work//Code Repo//S1Comp//DataDownload//data//fin//"+ticker+".html"
+        return "https://finance.yahoo.com/quote/{0}/financials?p={0}".format(ticker)
     elif type == 'quote':
         return "https://finance.yahoo.com/quote/{0}?p={0}".format(ticker)
     elif type == "cf":
-        return "C://Users//13476//OneDrive//Desktop//Data Archiving and BackUp//Work//Code Repo//S1Comp//DataDownload//data//cf//"+ticker+".html"
-        #return "https://finance.yahoo.com/quote/{0}/cash-flow?p={0}".format(ticker)
+        #return "C://Users//13476//OneDrive//Desktop//Data Archiving and BackUp//Work//Code Repo//S1Comp//DataDownload//data//cf//"+ticker+".html"
+        return "https://finance.yahoo.com/quote/{0}/cash-flow?p={0}".format(ticker)
     elif type == "bs":
-        return "C://Users//13476//OneDrive//Desktop//Data Archiving and BackUp//Work//Code Repo//S1Comp//DataDownload//data//bs//"+ticker+".html"
-        #return "https://finance.yahoo.com/quote/{0}/balance-sheet?p={0}".format(ticker)
+        #return "C://Users//13476//OneDrive//Desktop//Data Archiving and BackUp//Work//Code Repo//S1Comp//DataDownload//data//bs//"+ticker+".html"
+        return "https://finance.yahoo.com/quote/{0}/balance-sheet?p={0}".format(ticker)
     elif type == "perf":
         return "https://finance.yahoo.com/quote/{0}/performance?p={0}".format(ticker)
     elif type == "hist":
@@ -40,8 +40,8 @@ def linkList(type, ticker):
     elif type == "options":
         return "https://finance.yahoo.com/quote/{0}/options?p={0}".format(ticker)
     elif type == "ks":
-        return "C://Users//13476//OneDrive//Desktop//Data Archiving and BackUp//Work//Code Repo//S1Comp//DataDownload//data//ks//"+ticker+".html"
-        #return "https://finance.yahoo.com/quote/{0}/key-statistics?p={0}".format(ticker)
+        #return "C://Users//13476//OneDrive//Desktop//Data Archiving and BackUp//Work//Code Repo//S1Comp//DataDownload//data//ks//"+ticker+".html"
+        return "https://finance.yahoo.com/quote/{0}/key-statistics?p={0}".format(ticker)
     elif type == "inside":
         return "http://insiderbuyingselling.com/?t={0}".format(ticker)
 

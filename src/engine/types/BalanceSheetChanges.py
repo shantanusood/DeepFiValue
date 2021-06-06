@@ -12,11 +12,37 @@ class BalanceSheetChanges:
         self.subsector = subsector
         self.data = data
 
+    def lines(self):
+        lines_dict = {}
+        lines_list = []
+        for tick in self.data:
+            parent_t = ""
+            if self.parent == "Customs":
+                if os.path.isfile('./data/tickers/Categories.csv'):
+                    get_parent = pd.read_csv('./data/tickers/Categories.csv')
+                    isSubsector = get_parent['Subsector'] == tick['Category']
+                    parentSect = get_parent[isSubsector]
+                    parent_t = str(parentSect['ParentSector'].head(1).item())
+            else:
+                parent_t = self.parent
+            try:
+                fin = Helpers.get_by_type(parent_t, tick['Category'], tick['Ticker'], "bs")
+                for x in range(1, len(list(fin.keys()))):
+                    vals = set()
+                    for y in fin[str(list(fin.keys())[x])]:
+                        vals.add(y)
+                    lines_dict = {tick['Ticker'] : list(vals)}
+                    lines_list.append(lines_dict)
+                    break
+            except:
+                pass
+        return str(lines_list).replace("'", "\"")
+
     def final(self):
-        self.asset_growth()
-        self.shares_growth()
-        self.asset_liab()
-        self.debt_growth()
+        #self.asset_growth()
+        #self.shares_growth()
+        #self.asset_liab()
+        #self.debt_growth()
         return str(self.data).replace("'", "\"")
 
     def asset_growth(self):

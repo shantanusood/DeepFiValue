@@ -16,6 +16,8 @@ import re
 from requests import get
 import numpy as np
 
+from src.engine.types import Helpers
+
 app = Flask(__name__)
 CORS(app)
 
@@ -274,20 +276,21 @@ def data_sync_dump(parent, subsector, ticker, type):
             f.close()
         with open(filename, 'r') as data_file:
             data = json.loads(data_file.read())
-            count = 0
-            isFound = False
-            tick_jsons = {}
-            for x in data:
-                tick_jsons = dict(x)
-                if list(tick_jsons.keys())[0] == str(ticker):
-                    data[count][str(ticker)][str(type)] = addData
-                    isFound = True
-                    break
-                count = count + 1
-            if isFound == False:
-                type_jsons = {str(type): addData}
-                tick_jsons = {str(ticker): type_jsons}
-                data.append(tick_jsons)
+            if "ERROR" not in str(addData):
+                count = 0
+                isFound = False
+                tick_jsons = {}
+                for x in data:
+                    tick_jsons = dict(x)
+                    if list(tick_jsons.keys())[0] == str(ticker):
+                        data[count][str(ticker)][str(type)] = addData
+                        isFound = True
+                        break
+                    count = count + 1
+                if isFound == False:
+                    type_jsons = {str(type): addData}
+                    tick_jsons = {str(ticker): type_jsons}
+                    data.append(tick_jsons)
         with open(filename, 'w') as data_file:
             data_file.write(str(data).replace("'", "\""))
 
@@ -317,7 +320,7 @@ def data_sync_dump(parent, subsector, ticker, type):
         return str(data).replace("'", "\"")
     except:
         traceback.print_exc()
-        str("{'res': 'ERROR: Data sync dump failed for: " + parent + " > " + subsector + " > " + type + "'}").replace("'", "\"")
+        return str("{'res': 'ERROR: Data sync dump failed for: " + parent + " > " + subsector + " > " + type + "'}").replace("'", "\"")
 
 @app.route('/data/sync/update/<parent>/<subsector>/<ticker>/<type>', methods=['GET', 'POST'])
 def data_sync_update(parent, subsector, ticker, type):
@@ -328,19 +331,20 @@ def data_sync_update(parent, subsector, ticker, type):
     try:
         with open(filename, 'r') as data_file:
             data = json.loads(data_file.read())
-            count = 0
-            tick_jsons = {}
-            for x in data:
-                tick_jsons = dict(x)
-                if list(tick_jsons.keys())[0] == str(ticker):
-                    tm_data_incoming = list(addData.keys())
-                    for i in tm_data_incoming:
-                        if 'quote' in str(type):
-                            data[count][str(ticker)][str(type)] = {str(i) : addData[str(i)]}
-                        else:
-                            data[count][str(ticker)][str(type)][str(i)] = addData[str(i)]
-                    break
-                count = count + 1
+            if "ERROR" not in str(addData):
+                count = 0
+                tick_jsons = {}
+                for x in data:
+                    tick_jsons = dict(x)
+                    if list(tick_jsons.keys())[0] == str(ticker):
+                        tm_data_incoming = list(addData.keys())
+                        for i in tm_data_incoming:
+                            if 'quote' in str(type):
+                                data[count][str(ticker)][str(type)] = {str(i) : addData[str(i)]}
+                            else:
+                                data[count][str(ticker)][str(type)][str(i)] = addData[str(i)]
+                        break
+                    count = count + 1
         with open(filename, 'w', encoding="utf-8") as data_file:
             data_file.write(str(data).replace("'", "\""))
 
@@ -487,20 +491,21 @@ def data_sync_dump_in(parent, subsector, ticker, type, data):
             f.close()
         with open(filename, 'r') as data_file:
             data = json.loads(data_file.read())
-            count = 0
-            isFound = False
-            tick_jsons = {}
-            for x in data:
-                tick_jsons = dict(x)
-                if list(tick_jsons.keys())[0] == str(ticker):
-                    data[count][str(ticker)][str(type)] = addData
-                    isFound = True
-                    break
-                count = count + 1
-            if isFound == False:
-                type_jsons = {str(type): addData}
-                tick_jsons = {str(ticker): type_jsons}
-                data.append(tick_jsons)
+            if "ERROR" not in str(addData):
+                count = 0
+                isFound = False
+                tick_jsons = {}
+                for x in data:
+                    tick_jsons = dict(x)
+                    if list(tick_jsons.keys())[0] == str(ticker):
+                        data[count][str(ticker)][str(type)] = addData
+                        isFound = True
+                        break
+                    count = count + 1
+                if isFound == False:
+                    type_jsons = {str(type): addData}
+                    tick_jsons = {str(ticker): type_jsons}
+                    data.append(tick_jsons)
         with open(filename, 'w') as data_file:
             data_file.write(str(data).encode("ascii", errors="ignore").decode().replace("'", "\""))
 
@@ -540,19 +545,20 @@ def data_sync_update_in(parent, subsector, ticker, type, data):
     try:
         with open(filename, 'r') as data_file:
             data = json.loads(data_file.read())
-            count = 0
-            tick_jsons = {}
-            for x in data:
-                tick_jsons = dict(x)
-                if list(tick_jsons.keys())[0] == str(ticker):
-                    tm_data_incoming = list(addData.keys())
-                    for i in tm_data_incoming:
-                        if 'quote' in str(type):
-                            data[count][str(ticker)][str(type)] = {str(i): addData[str(i)]}
-                        else:
-                            data[count][str(ticker)][str(type)][str(i)] = addData[str(i)]
-                    break
-                count = count + 1
+            if "ERROR" not in str(addData):
+                count = 0
+                tick_jsons = {}
+                for x in data:
+                    tick_jsons = dict(x)
+                    if list(tick_jsons.keys())[0] == str(ticker):
+                        tm_data_incoming = list(addData.keys())
+                        for i in tm_data_incoming:
+                            if 'quote' in str(type):
+                                data[count][str(ticker)][str(type)] = {str(i): addData[str(i)]}
+                            else:
+                                data[count][str(ticker)][str(type)][str(i)] = addData[str(i)]
+                        break
+                    count = count + 1
         with open(filename, 'w', encoding="utf-8") as data_file:
             data_file.write(str(data).replace("'", "\""))
 
@@ -604,6 +610,48 @@ def getCIK(ticker):
 #####################################################################################################################
 ################################################# DECISION ENGINE ###################################################
 #####################################################################################################################
+@app.route('/data/lines/<parent>/<subsector>/<type>', methods=["GET", "POST"])
+def data_analysis_engine_line_items(parent, subsector, type):
+    return Decide(parent, subsector, type, list(request.json)).lineItems()
+
+@app.route('/data/lines/<parent>/<subsector>/<type>/<ticker>/<line>', methods=["GET", "POST"])
+def data_analysis_engine_line_items_tick(parent, subsector, type, ticker, line):
+    line = line.replace("*&*", "/")
+    data = ""
+    if str(parent) == "Customs":
+        if os.path.isfile('./data/tickers/Categories.csv'):
+            get_sub = pd.read_csv('./data/tickers/Categories.csv')
+        isSub = get_sub['Subsector'] == str(subsector)
+        subSect = get_sub[isSub]
+        parent = subSect['ParentSector'].to_list()[0]
+
+    if type == 'incomechanges':
+        data = Helpers.get_by_type(parent, subsector, ticker, "fin")
+    elif type == 'balancesheetchanges':
+        data = Helpers.get_by_type(parent, subsector, ticker, "bs")
+    elif type == 'cashflowchanges':
+        data = Helpers.get_by_type(parent, subsector, ticker, "cf")
+    elif type == 'ratios':
+        data = Helpers.get_by_type(parent, subsector, ticker, "ks")
+
+    if "Trailing" in line:
+        line = line + " "
+
+    duration = []
+    line_list = []
+    for x in dict(data):
+        duration.append(data[x]['Duration'])
+        val = data[x][str(line).replace(",", "")].replace(",", "")
+        try:
+            if "Market Cap" in line:
+                val = float(str(val)[:-1])
+            else:
+                val = float(val)
+        except:
+            val = 0
+        line_list.append(val)
+    return str([list(reversed(duration)), list(reversed(line_list))]).replace("'", "\"")
+
 @app.route('/data/analyze/<parent>/<subsector>/<type>', methods=["GET", "POST"])
 def data_analysis_engine(parent, subsector, type):
     return Decide(parent, subsector, type, list(request.json)).final()
