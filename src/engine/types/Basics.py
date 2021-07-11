@@ -21,11 +21,17 @@ class Basics:
         self.price()
         self.pt()
         self.up()
-        self.pe()
+        self.tpe()
+        self.fpe()
         self.ps()
         self.pb()
         self.pf()
         self.pMargin()
+        self.opMargin()
+        self.retOnAsset()
+        self.retOnEquity()
+        self.evToRev()
+        self.evToEbitda()
         return str(self.data).replace("'", "\"")
 
     def mc(self):
@@ -220,22 +226,22 @@ class Basics:
             try:
                 p_e = Helpers.get_by_type(parent_t, tick['Category'], tick['Ticker'], "quote")
                 if "ERROR" in p_e:
-                    self.data[count]['basics']['pMargin'] = '-999'
+                    self.data[count]['basics']['pMar'] = '-999'
                 else:
                     if 'N/A' in p_e[str(list(p_e.keys())[0])]['Profit Margin ']:
-                        self.data[count]['basics']['pMargin'] = '-999'
+                        self.data[count]['basics']['pMar'] = '-999'
                     else:
                         target = float(p_e[str(list(p_e.keys())[0])]['Profit Margin '].replace(",", "").replace("%", ""))
                         if target>100:
                             raise Exception("Profit margin over 100% - Invalid")
                         else:
-                            self.data[count]['basics']['pMargin'] = str(target)
+                            self.data[count]['basics']['pMar'] = str(target)
             except:
-                self.data[count]['basics']['pMargin'] = '-999'
+                self.data[count]['basics']['pMar'] = '-999'
                 pass
             count = count + 1
 
-    def pe(self):
+    def opMargin(self):
         count = 0
         parent_t = ""
         for tick in self.data:
@@ -250,14 +256,133 @@ class Basics:
             try:
                 p_e = Helpers.get_by_type(parent_t, tick['Category'], tick['Ticker'], "quote")
                 if "ERROR" in p_e:
-                    self.data[count]['basics']['pe'] = '-999'
+                    self.data[count]['basics']['opMar'] = '-999'
                 else:
-                    if p_e[str(list(p_e.keys())[0])]['PE Ratio (TTM)'] == 'N/A':
-                        self.data[count]['basics']['pe'] = '-999'
+                    if 'N/A' in p_e[str(list(p_e.keys())[0])]['Operating Margin (ttm)']:
+                        self.data[count]['basics']['opMar'] = '-999'
                     else:
-                        self.data[count]['basics']['pe'] = p_e[str(list(p_e.keys())[0])]['PE Ratio (TTM)']
+                        target = float(
+                            p_e[str(list(p_e.keys())[0])]['Operating Margin (ttm)'].replace(",", "").replace("%", ""))
+                        if target > 100:
+                            raise Exception("Operating margin over 100% - Invalid")
+                        else:
+                            self.data[count]['basics']['opMar'] = str(target)
             except:
-                self.data[count]['basics']['pe'] = '-999'
+                self.data[count]['basics']['opMar'] = '-999'
+                pass
+            count = count + 1
+
+    def retOnAsset(self):
+        count = 0
+        parent_t = ""
+        for tick in self.data:
+            if self.parent == "Customs":
+                if os.path.isfile('./data/tickers/Categories.csv'):
+                    get_parent = pd.read_csv('./data/tickers/Categories.csv')
+                    isSubsector = get_parent['Subsector'] == tick['Category']
+                    parentSect = get_parent[isSubsector]
+                    parent_t = str(parentSect['ParentSector'].head(1).item())
+            else:
+                parent_t = self.parent
+            try:
+                p_e = Helpers.get_by_type(parent_t, tick['Category'], tick['Ticker'], "quote")
+                if "ERROR" in p_e:
+                    self.data[count]['basics']['retAs'] = '-999'
+                else:
+                    if 'N/A' in p_e[str(list(p_e.keys())[0])]['Return on Assets (ttm)']:
+                        self.data[count]['basics']['retAs'] = '-999'
+                    else:
+                        target = float(
+                            p_e[str(list(p_e.keys())[0])]['Return on Assets (ttm)'].replace(",", "").replace("%", ""))
+                        if target > 100:
+                            raise Exception("Return on asset over 100% - Invalid")
+                        else:
+                            self.data[count]['basics']['retAs'] = str(target)
+            except:
+                self.data[count]['basics']['retAs'] = '-999'
+                pass
+            count = count + 1
+
+    def retOnEquity(self):
+        count = 0
+        parent_t = ""
+        for tick in self.data:
+            if self.parent == "Customs":
+                if os.path.isfile('./data/tickers/Categories.csv'):
+                    get_parent = pd.read_csv('./data/tickers/Categories.csv')
+                    isSubsector = get_parent['Subsector'] == tick['Category']
+                    parentSect = get_parent[isSubsector]
+                    parent_t = str(parentSect['ParentSector'].head(1).item())
+            else:
+                parent_t = self.parent
+            try:
+                p_e = Helpers.get_by_type(parent_t, tick['Category'], tick['Ticker'], "quote")
+                if "ERROR" in p_e:
+                    self.data[count]['basics']['retEq'] = '-999'
+                else:
+                    if 'N/A' in p_e[str(list(p_e.keys())[0])]['Return on Equity (ttm)']:
+                        self.data[count]['basics']['retEq'] = '-999'
+                    else:
+                        target = float(
+                            p_e[str(list(p_e.keys())[0])]['Return on Equity (ttm)'].replace(",", "").replace("%", ""))
+                        if target > 100:
+                            raise Exception("Return on asset over 100% - Invalid")
+                        else:
+                            self.data[count]['basics']['retEq'] = str(target)
+            except:
+                self.data[count]['basics']['retEq'] = '-999'
+                pass
+            count = count + 1
+
+    def fpe(self):
+        count = 0
+        parent_t = ""
+        for tick in self.data:
+            if self.parent == "Customs":
+                if os.path.isfile('./data/tickers/Categories.csv'):
+                    get_parent = pd.read_csv('./data/tickers/Categories.csv')
+                    isSubsector = get_parent['Subsector'] == tick['Category']
+                    parentSect = get_parent[isSubsector]
+                    parent_t = str(parentSect['ParentSector'].head(1).item())
+            else:
+                parent_t = self.parent
+            try:
+                p_e = Helpers.get_by_type(parent_t, tick['Category'], tick['Ticker'], "ks")
+                if "ERROR" in p_e:
+                    self.data[count]['basics']['fpe'] = '-999'
+                else:
+                    if p_e['Current']['Forward P/E 1'] == 'N/A':
+                        self.data[count]['basics']['fpe'] = '-999'
+                    else:
+                        self.data[count]['basics']['fpe'] = p_e['Current']['Forward P/E 1']
+            except:
+                self.data[count]['basics']['fpe'] = '-999'
+                pass
+            count = count + 1
+
+    def tpe(self):
+        count = 0
+        parent_t = ""
+        for tick in self.data:
+            if self.parent == "Customs":
+                if os.path.isfile('./data/tickers/Categories.csv'):
+                    get_parent = pd.read_csv('./data/tickers/Categories.csv')
+                    isSubsector = get_parent['Subsector'] == tick['Category']
+                    parentSect = get_parent[isSubsector]
+                    parent_t = str(parentSect['ParentSector'].head(1).item())
+            else:
+                parent_t = self.parent
+            try:
+                p_e = Helpers.get_by_type(parent_t, tick['Category'], tick['Ticker'], "ks")
+                if "ERROR" in p_e:
+                    self.data[count]['basics']['tpe'] = '-999'
+                else:
+                    if p_e['Current']['Trailing P/E '] == 'N/A':
+                        self.data[count]['basics']['tpe'] = '-999'
+                    else:
+                        self.data[count]['basics']['tpe'] = p_e['Current']['Trailing P/E ']
+            except:
+                self.data[count]['basics']['tpe'] = '-999'
                 pass
             count = count + 1
 
@@ -274,18 +399,16 @@ class Basics:
             else:
                 parent_t = self.parent
             try:
-                quote = Helpers.get_by_type(parent_t, tick['Category'], tick['Ticker'], "quote")
-                m_cap = str(quote[str(list(quote.keys())[0])]['Market Cap'])
-                if "T" in m_cap:
-                    m_cap = int(float(m_cap.replace("T", ""))*1000000000000)
-                elif "B" in m_cap:
-                    m_cap = int(float(m_cap.replace("B", ""))*1000000000)
-                elif "M" in m_cap:
-                    m_cap = int(float(m_cap.replace("M", ""))*1000000)
-                fin = int(str(Helpers.get_by_type(parent_t, tick['Category'], tick['Ticker'], "fin")['TTM']['Total Revenue']).replace(",", ""))*1000
-                self.data[count]['basics']['ps'] = str(round(float(m_cap/fin), 2))
+                p_e = Helpers.get_by_type(parent_t, tick['Category'], tick['Ticker'], "ks")
+                if "ERROR" in p_e:
+                    self.data[count]['basics']['ps'] = '-999'
+                else:
+                    if p_e['Current']['Price/Sales (ttm)'] == 'N/A':
+                        self.data[count]['basics']['ps'] = '-999'
+                    else:
+                        self.data[count]['basics']['ps'] = p_e['Current']['Price/Sales (ttm)']
             except:
-                self.data[count]['basics']['ps'] = str("-999")
+                self.data[count]['basics']['ps'] = '-999'
                 pass
             count = count + 1
 
@@ -302,20 +425,16 @@ class Basics:
             else:
                 parent_t = self.parent
             try:
-                quote = Helpers.get_by_type(parent_t, tick['Category'], tick['Ticker'], "quote")
-                m_cap = str(quote[str(list(quote.keys())[0])]['Market Cap'])
-                if "T" in m_cap:
-                    m_cap = int(float(m_cap.replace("T", "")) * 1000000000000)
-                elif "B" in m_cap:
-                    m_cap = int(float(m_cap.replace("B", "")) * 1000000000)
-                elif "M" in m_cap:
-                    m_cap = int(float(m_cap.replace("M", "")) * 1000000)
-                bs = Helpers.get_by_type(parent_t, tick['Category'], tick['Ticker'], "bs")
-                bs = bs[str(list(bs.keys())[0])]
-                fin = int(str(bs['Total Equity Gross Minority Interest']).replace(",", "")) * 1000
-                self.data[count]['basics']['pb'] = str(round(float(m_cap / fin), 2))
+                p_e = Helpers.get_by_type(parent_t, tick['Category'], tick['Ticker'], "ks")
+                if "ERROR" in p_e:
+                    self.data[count]['basics']['pb'] = '-999'
+                else:
+                    if p_e['Current']['Price/Book (mrq)'] == 'N/A':
+                        self.data[count]['basics']['pb'] = '-999'
+                    else:
+                        self.data[count]['basics']['pb'] = p_e['Current']['Price/Book (mrq)']
             except:
-                self.data[count]['basics']['pb'] = str("-999")
+                self.data[count]['basics']['pb'] = '-999'
                 pass
             count = count + 1
 
@@ -345,5 +464,57 @@ class Basics:
                 self.data[count]['basics']['pf'] = str(round(float(m_cap / fin), 2))
             except:
                 self.data[count]['basics']['pf'] = str("-999")
+                pass
+            count = count + 1
+
+    def evToRev(self):
+        count = 0
+        parent_t = ""
+        for tick in self.data:
+            if self.parent == "Customs":
+                if os.path.isfile('./data/tickers/Categories.csv'):
+                    get_parent = pd.read_csv('./data/tickers/Categories.csv')
+                    isSubsector = get_parent['Subsector'] == tick['Category']
+                    parentSect = get_parent[isSubsector]
+                    parent_t = str(parentSect['ParentSector'].head(1).item())
+            else:
+                parent_t = self.parent
+            try:
+                p_e = Helpers.get_by_type(parent_t, tick['Category'], tick['Ticker'], "ks")
+                if "ERROR" in p_e:
+                    self.data[count]['basics']['evRev'] = '-999'
+                else:
+                    if p_e['Current']['Enterprise Value/Revenue 3'] == 'N/A':
+                        self.data[count]['basics']['evRev'] = '-999'
+                    else:
+                        self.data[count]['basics']['evRev'] = p_e['Current']['Enterprise Value/Revenue 3']
+            except:
+                self.data[count]['basics']['evRev'] = '-999'
+                pass
+            count = count + 1
+
+    def evToEbitda(self):
+        count = 0
+        parent_t = ""
+        for tick in self.data:
+            if self.parent == "Customs":
+                if os.path.isfile('./data/tickers/Categories.csv'):
+                    get_parent = pd.read_csv('./data/tickers/Categories.csv')
+                    isSubsector = get_parent['Subsector'] == tick['Category']
+                    parentSect = get_parent[isSubsector]
+                    parent_t = str(parentSect['ParentSector'].head(1).item())
+            else:
+                parent_t = self.parent
+            try:
+                p_e = Helpers.get_by_type(parent_t, tick['Category'], tick['Ticker'], "ks")
+                if "ERROR" in p_e:
+                    self.data[count]['basics']['evEbit'] = '-999'
+                else:
+                    if p_e['Current']['Enterprise Value/EBITDA 7'] == 'N/A':
+                        self.data[count]['basics']['evEbit'] = '-999'
+                    else:
+                        self.data[count]['basics']['evEbit'] = p_e['Current']['Enterprise Value/EBITDA 7']
+            except:
+                self.data[count]['basics']['evEbit'] = '-999'
                 pass
             count = count + 1

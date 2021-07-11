@@ -75,7 +75,7 @@ AEM,Agnico Eagle Mines Limited,NYQ,Gold,USA,06/06/2021,06/06/2021,06/06/2021,06/
 APD,Air Products and Chemicals Inc.,NYQ,Chemicals - Major Diversified,USA,5/12/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,N
 AMBA,Ambarella Inc.,NMS,Semiconductor Equipment & Materials,USA,5/12/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,N
 NVS,Novartis AG,NYQ,Drug Manufacturers - Major,USA,5/31/2021,5/29/2021,5/29/2021,5/29/2021,5/29/2021,N,N
-ANF,Abercrombie & Fitch Co.,NYQ,Apparel Stores,USA,5/31/2021,5/28/2021,6/6/2021,5/28/2021,5/28/2021,5/28/2021,N
+ANF,Abercrombie & Fitch Co.,NYQ,Apparel Stores,USA,06/06/2021,06/06/2021,06/06/2021,06/06/2021,06/06/2021,06/06/2021,N
 LULU,Lululemon Athletica Inc.,NMS,Textile - Apparel Clothing,USA,5/31/2021,N,3/30/2021,3/30/2021,5/28/2021,5/28/2021,N
 RAD,Rite Aid Corporation,NYQ,Drug Stores,USA,6/1/2021,5/29/2021,5/29/2021,5/29/2021,5/29/2021,N,N
 ARRY,Array BioPharma Inc.,NGM,Biotechnology,USA,5/31/2021,5/29/2021,5/29/2021,5/29/2021,5/29/2021,5/29/2021,N
@@ -99,7 +99,7 @@ AFL,Aflac Incorporated,NYQ,Accident & Health Insurance,USA,4/4/2021,5/29/2021,5/
 ADI,Analog Devices Inc.,NMS,Semiconductor - Integrated Circuits,USA,5/12/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,N
 ACIW,ACI Worldwide Inc.,NMS,Technical & System Software,USA,5/12/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,N
 AMP,Ameriprise Financial Inc.,NYQ,Asset Management,USA,3/28/2021,5/29/2021,5/29/2021,5/29/2021,5/29/2021,5/29/2021,N
-AEO,American Eagle Outfitters Inc.,NYQ,Apparel Stores,USA,5/31/2021,5/28/2021,6/6/2021,5/28/2021,5/28/2021,5/28/2021,N
+AEO,American Eagle Outfitters Inc.,NYQ,Apparel Stores,USA,06/06/2021,06/06/2021,06/06/2021,06/06/2021,06/06/2021,06/06/2021,N
 AWK,American Water Works Company Inc.,NYQ,Water Utilities,USA,5/12/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,N
 NVO,Novo Nordisk A S,NYQ,Drug Manufacturers - Other,USA,5/31/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,N,N
 ALK,Alaska Air Group Inc.,NYQ,Regional Airlines,USA,5/12/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,N
@@ -115,7 +115,7 @@ AVXL,Anavex Life Sciences Corp.,NCM,Biotechnology,USA,5/31/2021,5/29/2021,5/29/2
 ARLP,Alliance Resource Partners L.P.,NMS,Industrial Metals & Minerals,USA,5/12/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,N
 ANTM,Anthem Inc.,NYQ,Health Care Plans,USA,5/31/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,N
 AGU,Agrium Inc.,NYQ,Agricultural Chemicals,USA,5/12/2021,N,5/30/2021,5/30/2021,5/30/2021,N,N
-AG,First Majestic Silver Corp.,NYQ,Silver,USA,5/31/2021,5/28/2021,5/28/2021,5/28/2021,5/28/2021,N,N
+AG,First Majestic Silver Corp.,NYQ,Silver,USA,06/06/2021,06/06/2021,06/06/2021,06/06/2021,06/06/2021,N,N
 AFSI,AmTrust Financial Services Inc.,NMS,Property & Casualty Insurance,USA,3/26/2021,N,5/29/2021,5/29/2021,4/3/2021,N,N
 ABC,AmerisourceBergen Corporation,NYQ,Drugs Wholesale,USA,5/31/2021,5/31/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,N
 STO,Statoil ASA,NYQ,Major Integrated Oil & Gas,USA,5/11/2021,N,5/29/2021,5/29/2021,5/29/2021,N,N
@@ -664,7 +664,7 @@ CZBS,Citizens Bancshares Corporation,PNK,Regional - Mid-Atlantic Banks,USA,4/4/2
 GBSN,Great Basin Scientific Inc.,PNK,Medical Laboratories & Research,USA,5/11/2021,N,5/30/2021,5/30/2021,4/25/2021,N,N
 BEN,Franklin Resources Inc.,NYQ,Asset Management,USA,3/28/2021,5/29/2021,5/29/2021,5/29/2021,5/29/2021,5/29/2021,N
 GNCA,Genocea Biosciences Inc.,NGM,Biotechnology,USA,5/31/2021,5/29/2021,5/29/2021,5/29/2021,5/29/2021,5/29/2021,N
-LB,L Brands Inc.,NYQ,Apparel Stores,USA,5/31/2021,5/28/2021,6/6/2021,5/28/2021,5/28/2021,5/28/2021,N
+LB,L Brands Inc.,NYQ,Apparel Stores,USA,06/06/2021,06/06/2021,06/06/2021,06/06/2021,06/06/2021,06/06/2021,N
 BDSI,BioDelivery Sciences International Inc.,NCM,Biotechnology,USA,5/31/2021,5/29/2021,5/29/2021,5/29/2021,5/29/2021,5/29/2021,N
 BMO,Bank of Montreal,NYQ,Money Center Banks,USA,6/2/2021,5/29/2021,5/29/2021,5/29/2021,5/29/2021,N,N
 BPT,BP Prudhoe Bay Royalty Trust,NYQ,Oil & Gas Refining & Marketing,USA,6/2/2021,5/29/2021,5/29/2021,5/29/2021,5/29/2021,N,N
@@ -697,7 +697,7 @@ BC,Brunswick Corporation,NYQ,Recreational Goods Other,USA,5/31/2021,5/28/2021,5/
 PBI,Pitney Bowes Inc.,NYQ,Business Equipment,USA,5/31/2021,5/28/2021,5/28/2021,5/28/2021,5/28/2021,5/28/2021,N
 KERX,Keryx Biopharmaceuticals Inc.,NCM,Biotechnology,USA,5/11/2021,N,5/29/2021,5/29/2021,5/29/2021,N,N
 CBB,Cincinnati Bell Inc.,NYQ,Telecom Services - Domestic,USA,5/30/2021,5/28/2021,5/28/2021,5/28/2021,5/28/2021,5/28/2021,N
-BKE,The Buckle Inc.,NYQ,Apparel Stores,USA,5/31/2021,5/28/2021,6/6/2021,5/28/2021,5/28/2021,5/28/2021,N
+BKE,The Buckle Inc.,NYQ,Apparel Stores,USA,06/06/2021,06/06/2021,06/06/2021,06/06/2021,06/06/2021,06/06/2021,N
 BGS,B&G Foods Inc.,NYQ,Processed & Packaged Goods,USA,6/1/2021,5/29/2021,5/29/2021,5/29/2021,5/29/2021,N,N
 BCEI,Bonanza Creek Energy Inc.,NYQ,Independent Oil & Gas,USA,6/2/2021,5/29/2021,5/29/2021,5/29/2021,5/29/2021,5/29/2021,N
 BBG,Bill Barrett Corporation,NYQ,Oil & Gas Drilling & Exploration,USA,5/11/2021,N,5/29/2021,5/29/2021,5/29/2021,N,N
@@ -783,7 +783,7 @@ BZH,Beazer Homes USA Inc.,NYQ,Residential Construction,USA,5/12/2021,5/30/2021,5
 BV,Bazaarvoice Inc.,NMS,Application Software,USA,5/12/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,N
 BSBR,Banco Santander (Brasil) S.A.,NYQ,Foreign Regional Banks,USA,4/3/2021,N,5/29/2021,5/29/2021,5/29/2021,N,N
 BRC,Brady Corporation,NYQ,Security Software & Services,USA,5/12/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,N
-BEBE,Bebe Stores Inc.,NCM,Apparel Stores,USA,5/31/2021,5/28/2021,6/6/2021,5/28/2021,5/28/2021,N,N
+BEBE,Bebe Stores Inc.,NCM,Apparel Stores,USA,06/06/2021,06/06/2021,06/06/2021,06/06/2021,06/06/2021,N,N
 BBOX,Black Box Corporation,NMS,Networking & Communication Devices,USA,5/12/2021,N,5/30/2021,5/30/2021,5/30/2021,N,N
 BAA,Banro Corporation,ASE,Gold,USA,N,N,06/06/2021,06/06/2021,06/06/2021,N,N
 TECH,Bio-Techne Corporation,NMS,Biotechnology,USA,5/31/2021,5/29/2021,5/29/2021,5/29/2021,5/29/2021,5/29/2021,N
@@ -955,7 +955,7 @@ CHRS,Coherus Biosciences Inc.,NGM,Biotechnology,USA,5/31/2021,5/29/2021,5/29/202
 BVX,Bovie Medical Corporation,ASE,Medical Instruments & Supplies,USA,5/12/2021,N,5/30/2021,5/30/2021,5/30/2021,N,N
 BTN,Ballantyne Strong Inc,ASE,Photographic Equipment & Supplies,USA,5/31/2021,5/28/2021,5/28/2021,5/28/2021,5/28/2021,5/28/2021,N
 BSET,Bassett Furniture Industries Incorporated,NMS,Home Furnishings & Fixtures,USA,5/12/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,N
-BOOT,Boot Barn Holdings Inc.,NYQ,Apparel Stores,USA,5/31/2021,5/28/2021,6/6/2021,5/28/2021,5/28/2021,5/28/2021,N
+BOOT,Boot Barn Holdings Inc.,NYQ,Apparel Stores,USA,06/06/2021,06/06/2021,06/06/2021,06/06/2021,06/06/2021,06/06/2021,N
 BOOM,DMC Global Inc.,NMS,Metal Fabrication,USA,5/12/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,N
 BNFT,Benefitfocus Inc.,NGM,Application Software,USA,5/12/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,N
 BIOC,Biocept Inc.,NCM,Medical Laboratories & Research,USA,5/31/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,N
@@ -1354,7 +1354,7 @@ CME,CME Group Inc.,NMS,Investment Brokerage - National,USA,3/26/2021,5/29/2021,5
 CIEN,Ciena Corporation,NYQ,Communication Equipment,USA,5/31/2021,5/28/2021,5/28/2021,5/28/2021,5/28/2021,5/28/2021,N
 CHKP,Check Point Software Technologies Ltd.,NMS,Security Software & Services,USA,5/12/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,N,N
 VFC,V.F. Corporation,NYQ,Textile - Apparel Clothing,USA,5/31/2021,5/28/2021,5/28/2021,5/28/2021,5/28/2021,5/28/2021,N
-SCCO,Southern Copper Corporation,NYQ,Copper,USA,5/31/2021,5/28/2021,5/28/2021,5/28/2021,5/28/2021,N,N
+SCCO,Southern Copper Corporation,NYQ,Copper,USA,06/06/2021,06/06/2021,06/06/2021,06/06/2021,06/06/2021,N,N
 K,Kellogg Company,NYQ,Processed & Packaged Goods,USA,6/1/2021,5/29/2021,5/29/2021,5/29/2021,5/29/2021,5/29/2021,N
 HRL,Hormel Foods Corporation,NYQ,Meat Products,USA,6/1/2021,5/29/2021,5/29/2021,5/29/2021,5/29/2021,5/29/2021,N
 CSIQ,Canadian Solar Inc.,NMS,Semiconductor - Specialized,USA,5/12/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,N,N
@@ -1393,7 +1393,7 @@ CNX,CONSOL Energy Inc.,NYQ,Independent Oil & Gas,USA,6/2/2021,5/29/2021,5/29/202
 CLDX,Celldex Therapeutics Inc.,NMS,Biotechnology,USA,5/31/2021,5/29/2021,5/29/2021,5/29/2021,5/29/2021,5/29/2021,N
 CINF,Cincinnati Financial Corporation,NMS,Property & Casualty Insurance,USA,3/26/2021,5/29/2021,5/29/2021,5/29/2021,5/29/2021,5/29/2021,N
 NCR,NCR Corporation,NYQ,Information Technology Services,USA,5/12/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,N
-HL,Hecla Mining Company,NYQ,Silver,USA,5/31/2021,5/28/2021,5/28/2021,5/28/2021,5/28/2021,5/28/2021,N
+HL,Hecla Mining Company,NYQ,Silver,USA,06/06/2021,06/06/2021,06/06/2021,06/06/2021,06/06/2021,5/28/2021,N
 NFX,Newfield Exploration Company,NYQ,Independent Oil & Gas,USA,5/11/2021,N,5/29/2021,5/29/2021,5/29/2021,N,N
 LCI,Lannett Company Inc.,NYQ,Drugs - Generic,USA,5/31/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,N
 KMX,CarMax Inc.,NYQ,Auto Dealerships,USA,5/31/2021,5/28/2021,5/28/2021,5/28/2021,5/28/2021,5/28/2021,N
@@ -1516,7 +1516,7 @@ CR,Crane Co.,NYQ,Diversified Machinery,USA,5/12/2021,5/30/2021,5/30/2021,5/30/20
 CQP,Cheniere Energy Partners L.P.,ASE,Oil & Gas Pipelines,USA,6/2/2021,5/29/2021,5/29/2021,5/29/2021,5/29/2021,N,N
 CPST,Capstone Turbine Corporation,NCM,Industrial Electrical Equipment,USA,3/28/2021,N,5/30/2021,5/30/2021,4/25/2021,5/30/2021,N
 CNP,CenterPoint Energy Inc.,NYQ,Gas Utilities,USA,5/8/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,N
-CDE,Coeur Mining Inc.,NYQ,Silver,USA,5/31/2021,5/28/2021,3/20/2021,3/20/2021,5/28/2021,5/28/2021,N
+CDE,Coeur Mining Inc.,NYQ,Silver,USA,06/06/2021,06/06/2021,06/06/2021,06/06/2021,06/06/2021,5/28/2021,N
 CBG,CBRE Group Inc.,NYQ,Property Management,USA,5/12/2021,N,5/30/2021,5/30/2021,5/30/2021,N,N
 CACI,CACI International Inc,NYQ,Information Technology Services,USA,5/12/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,N
 DXR,Daxor Corporation,ASE,Medical Instruments & Supplies,USA,5/31/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,N,N
@@ -1551,7 +1551,7 @@ RWC,RELM Wireless Corporation,ASE,Communication Equipment,USA,5/7/2021,N,5/28/20
 POR,Portland General Electric Company,NYQ,Electric Utilities,USA,5/12/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,N
 PDS,Precision Drilling Corporation,NYQ,Oil & Gas Equipment & Services,USA,6/2/2021,5/29/2021,5/29/2021,5/29/2021,5/29/2021,N,N
 PBPB,Potbelly Corporation,NMS,Specialty Eateries,USA,5/31/2021,5/28/2021,5/28/2021,5/28/2021,5/28/2021,5/28/2021,N
-NWY,New York & Company Inc.,NYQ,Apparel Stores,USA,5/11/2021,N,6/6/2021,5/28/2021,5/28/2021,N,N
+NWY,New York & Company Inc.,NYQ,Apparel Stores,USA,5/11/2021,N,06/06/2021,06/06/2021,06/06/2021,N,N
 NRCIB,National Research Corporation,NMS,Research Services,USA,5/11/2021,N,5/28/2021,5/28/2021,5/11/2021,N,N
 MSN,Emerson Radio Corp.,ASE,Electronic Equipment,USA,5/31/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,N,N
 MSEX,Middlesex Water Company,NMS,Water Utilities,USA,5/12/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,N
@@ -1645,7 +1645,7 @@ LMOS,Lumos Networks Corp.,NMS,Diversified Communication Services,USA,5/11/2021,N
 LITB,LightInTheBox Holding Co. Ltd.,NYQ,Catalog & Mail Order Houses,USA,5/31/2021,5/28/2021,5/28/2021,5/28/2021,5/28/2021,N,N
 KRNY,Kearny Financial Corp.,NMS,Savings & Loans,USA,4/4/2021,5/29/2021,5/29/2021,5/29/2021,5/29/2021,5/29/2021,N
 JSDA,Jones Soda Co.,PNK,Beverages - Soft Drinks,USA,6/1/2021,5/29/2021,5/29/2021,5/29/2021,5/29/2021,5/29/2021,N
-GSV,Gold Standard Ventures Corp,ASE,Gold,USA,06/06/2021,06/06/2021,06/06/2021,06/06/2021,N,N,N
+GSV,Gold Standard Ventures Corp,ASE,Gold,USA,06/06/2021,06/06/2021,06/06/2021,06/06/2021,06/06/2021,N,N
 GLDD,Great Lakes Dredge & Dock Corporation,NMS,Heavy Construction,USA,5/12/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,N
 GFN,General Finance Corporation,NGM,Rental & Leasing Services,USA,5/12/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,N
 FFIC,Flushing Financial Corporation,NMS,Savings & Loans,USA,4/4/2021,5/29/2021,5/29/2021,5/29/2021,5/29/2021,5/29/2021,N
@@ -1786,7 +1786,7 @@ TWIN,Twin Disc Incorporated,NMS,Diversified Machinery,USA,5/12/2021,5/30/2021,5/
 TDS,Telephone and Data Systems Inc.,NYQ,Wireless Communications,USA,5/31/2021,5/28/2021,5/28/2021,5/28/2021,5/28/2021,5/28/2021,N
 DSPG,DSP Group Inc.,NMS,Semiconductor - Integrated Circuits,USA,5/12/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,N
 GNMK,GenMark Diagnostics Inc.,NGM,Medical Appliances & Equipment,USA,3/27/2021,N,5/29/2021,5/29/2021,4/25/2021,5/29/2021,N
-DXLG,Destination XL Group Inc.,NMS,Apparel Stores,USA,5/31/2021,5/28/2021,6/6/2021,5/28/2021,5/28/2021,5/28/2021,N
+DXLG,Destination XL Group Inc.,NMS,Apparel Stores,USA,06/06/2021,06/06/2021,06/06/2021,06/06/2021,06/06/2021,06/06/2021,N
 DVD,Dover Motorsports Inc.,NYQ,Sporting Activities,USA,5/31/2021,5/28/2021,5/28/2021,5/28/2021,5/28/2021,N,N
 DKL,Delek Logistics Partners LP,NYQ,Independent Oil & Gas,USA,6/2/2021,5/29/2021,5/29/2021,5/29/2021,5/29/2021,N,N
 DXYN,The Dixie Group Inc.,NGM,Textile Industrial,USA,5/12/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,N,N
@@ -1964,7 +1964,7 @@ MEI,Methode Electronics Inc.,NYQ,Diversified Electronics,USA,5/12/2021,5/30/2021
 LECO,Lincoln Electric Holdings Inc.,NMS,Small Tools & Accessories,USA,5/12/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,N
 JE,Just Energy Group Inc.,NYQ,Diversified Utilities,USA,5/8/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,N,N
 EZPW,EZCORP Inc.,NMS,Credit Services,USA,3/26/2021,5/29/2021,5/29/2021,5/29/2021,5/29/2021,5/29/2021,N
-EXPR,Express Inc.,NYQ,Apparel Stores,USA,5/31/2021,5/28/2021,6/6/2021,5/28/2021,5/28/2021,5/28/2021,N
+EXPR,Express Inc.,NYQ,Apparel Stores,USA,06/06/2021,06/06/2021,06/06/2021,06/06/2021,06/06/2021,06/06/2021,N
 EXLS,ExlService Holdings Inc.,NMS,Business Services,USA,5/12/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,N
 EGOV,NIC Inc.,NMS,Application Software,USA,3/26/2021,N,5/30/2021,5/30/2021,5/7/2021,5/30/2021,N
 PERY,Perry Ellis International Inc.,NMS,Textile - Apparel Clothing,USA,5/11/2021,N,5/28/2021,5/28/2021,5/28/2021,N,N
@@ -2157,7 +2157,7 @@ APLL,Wincash Apolo Gold & Energy Inc.,PNK,Gold,USA,N,N,06/06/2021,06/06/2021,06/
 XREG,XR Energy Inc.,PNK,Business Services,USA,5/12/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,N,N
 BMMCF,Kbridge Energy Corp.,PNK,Conglomerates,USA,5/12/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,N,N
 FB,Facebook Inc.,NMS,Internet Information Providers,USA,5/31/2021,5/28/2021,5/28/2021,5/28/2021,5/28/2021,5/28/2021,N
-FCX,Freeport-McMoRan Inc.,NYQ,Copper,USA,5/31/2021,5/28/2021,5/28/2021,5/28/2021,5/28/2021,N,N
+FCX,Freeport-McMoRan Inc.,NYQ,Copper,USA,06/06/2021,06/06/2021,06/06/2021,06/06/2021,06/06/2021,N,N
 FSLR,First Solar Inc.,NMS,Semiconductor - Specialized,USA,5/12/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,N
 WFM,Whole Foods Market Inc.,NMS,Grocery Stores,USA,5/11/2021,N,5/29/2021,5/29/2021,5/29/2021,N,N
 PRU,Prudential Financial Inc.,NYQ,Life Insurance,USA,4/24/2021,5/29/2021,5/29/2021,5/29/2021,5/29/2021,5/29/2021,N
@@ -2195,7 +2195,7 @@ GGAL,Grupo Financiero Galicia S.A.,NCM,Foreign Regional Banks,USA,4/3/2021,5/29/
 FTK,Flotek Industries Inc.,NYQ,Oil & Gas Equipment & Services,USA,6/2/2021,5/29/2021,5/29/2021,5/29/2021,5/29/2021,5/29/2021,N
 FARO,FARO Technologies Inc.,NMS,Scientific & Technical Instruments,USA,5/12/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,N
 SLF,Sun Life Financial Inc.,NYQ,Property & Casualty Insurance,USA,3/26/2021,5/29/2021,5/29/2021,5/29/2021,5/29/2021,N,N
-GFI,Gold Fields Limited,NYQ,Gold,USA,06/06/2021,06/06/2021,06/06/2021,06/06/2021,N,N,N
+GFI,Gold Fields Limited,NYQ,Gold,USA,06/06/2021,06/06/2021,06/06/2021,06/06/2021,06/06/2021,N,N
 FRT,Federal Realty Investment Trust,NYQ,REIT - Retail,USA,5/12/2021,N,5/8/2021,5/8/2021,5/8/2021,N,N
 PF,Pinnacle Foods Inc.,NYQ,Food - Major Diversified,USA,5/11/2021,N,5/29/2021,5/29/2021,5/29/2021,N,N
 KB,KB Financial Group Inc.,NYQ,Foreign Regional Banks,USA,4/3/2021,5/29/2021,5/29/2021,5/29/2021,5/29/2021,N,N
@@ -2266,7 +2266,7 @@ HMNF,HMN Financial Inc.,NGM,Savings & Loans,USA,4/4/2021,5/29/2021,5/29/2021,5/2
 FTEK,Fuel Tech Inc.,NMS,Pollution & Treatment Controls,USA,5/12/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,N
 FORTY,Formula Systems (1985) Ltd.,NMS,Business Software & Services,USA,5/12/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,N,N
 REFR,Research Frontiers Incorporated,NCM,Industrial Electrical Equipment,USA,3/28/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,N
-FSM,Fortuna Silver Mines Inc.,NYQ,Silver,USA,5/31/2021,5/28/2021,5/28/2021,5/28/2021,5/28/2021,N,N
+FSM,Fortuna Silver Mines Inc.,NYQ,Silver,USA,06/06/2021,06/06/2021,06/06/2021,06/06/2021,06/06/2021,N,N
 FRPH,FRP Holdings Inc.,NMS,Property Management,USA,5/12/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,N
 FLL,Full House Resorts Inc.,NCM,Resorts & Casinos,USA,5/31/2021,5/28/2021,5/28/2021,5/28/2021,5/28/2021,5/28/2021,N
 FGEN,FibroGen Inc.,NMS,Biotechnology,USA,5/31/2021,5/29/2021,5/29/2021,5/29/2021,5/29/2021,5/29/2021,N
@@ -2364,7 +2364,7 @@ MRVL,Marvell Technology Group Ltd.,NMS,Semiconductor - Integrated Circuits,USA,5
 PCLN,The Priceline Group Inc.,NMS,Business Services,USA,5/12/2021,N,5/30/2021,5/30/2021,5/30/2021,N,N
 GSK,GlaxoSmithKline plc,NYQ,Drug Manufacturers - Major,USA,5/31/2021,5/29/2021,5/29/2021,5/29/2021,5/29/2021,N,N
 GIS,General Mills Inc.,NYQ,Processed & Packaged Goods,USA,6/1/2021,5/29/2021,5/29/2021,5/29/2021,5/29/2021,5/29/2021,N
-GPS,The Gap Inc.,NYQ,Apparel Stores,USA,5/31/2021,5/28/2021,6/6/2021,5/28/2021,5/28/2021,N,N
+GPS,The Gap Inc.,NYQ,Apparel Stores,USA,06/06/2021,06/06/2021,06/06/2021,06/06/2021,06/06/2021,N,N
 UNH,UnitedHealth Group Incorporated,NYQ,Health Care Plans,USA,5/31/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,N
 GRPN,Groupon Inc.,NMS,Internet Information Providers,USA,5/31/2021,5/28/2021,5/28/2021,5/28/2021,5/28/2021,5/28/2021,N
 GPRO,GoPro Inc.,NMS,Photographic Equipment & Supplies,USA,5/31/2021,5/28/2021,5/28/2021,5/28/2021,5/28/2021,5/28/2021,N
@@ -2389,7 +2389,7 @@ GSAT,Globalstar Inc.,ASE,Wireless Communications,USA,5/31/2021,5/28/2021,5/28/20
 GOV,Government Properties Income Trust,NMS,REIT - Office,USA,5/12/2021,N,5/30/2021,5/30/2021,5/30/2021,N,N
 GGG,Graco Inc.,NYQ,Diversified Machinery,USA,5/12/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,N
 RDN,Radian Group Inc.,NYQ,Property & Casualty Insurance,USA,3/26/2021,5/29/2021,5/29/2021,5/29/2021,5/29/2021,5/29/2021,N
-GES,Guess  Inc.,NYQ,Apparel Stores,USA,5/31/2021,N,6/6/2021,5/28/2021,5/28/2021,5/28/2021,N
+GES,Guess  Inc.,NYQ,Apparel Stores,USA,06/06/2021,N,06/06/2021,06/06/2021,06/06/2021,06/06/2021,N
 GEO,The GEO Group Inc.,NYQ,REIT - Healthcare Facilities,USA,5/12/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,N
 GGP,GGP Inc.,NYQ,REIT - Retail,USA,5/12/2021,N,5/30/2021,5/30/2021,5/30/2021,N,N
 JCOM,j2 Global Inc.,NMS,Internet Software & Services,USA,5/12/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,N
@@ -2410,7 +2410,7 @@ GBL,GAMCO Investors Inc.,NYQ,Asset Management,USA,3/28/2021,5/29/2021,5/29/2021,
 G,Genpact Limited,NYQ,Business Services,USA,5/12/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,N
 MG,Mistras Group Inc.,NYQ,Security & Protection Services,USA,5/12/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,N
 GOGO,Gogo Inc.,NMS,Diversified Communication Services,USA,5/31/2021,5/28/2021,5/28/2021,5/28/2021,5/28/2021,5/28/2021,N
-GCO,Genesco Inc.,NYQ,Apparel Stores,USA,5/31/2021,5/28/2021,6/6/2021,5/28/2021,5/28/2021,5/28/2021,N
+GCO,Genesco Inc.,NYQ,Apparel Stores,USA,06/06/2021,06/06/2021,06/06/2021,06/06/2021,06/06/2021,06/06/2021,N
 IHG,InterContinental Hotels Group PLC,NYQ,Lodging,USA,5/31/2021,5/28/2021,5/28/2021,5/28/2021,5/28/2021,N,N
 HRG,HRG Group Inc.,NYQ,Conglomerates,USA,5/12/2021,N,5/30/2021,5/30/2021,4/26/2021,N,N
 GSS,Golden Star Resources Ltd.,ASE,Gold,USA,06/06/2021,06/06/2021,06/06/2021,06/06/2021,06/06/2021,N,N
@@ -2433,7 +2433,7 @@ MDU,MDU Resources Group Inc.,NYQ,General Building Materials,USA,5/12/2021,5/30/2
 GWRE,Guidewire Software Inc.,NYQ,Business Software & Services,USA,5/12/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,N
 GTN,Gray Television Inc.,NYQ,Broadcasting - TV,USA,5/31/2021,5/28/2021,5/28/2021,5/28/2021,5/28/2021,5/28/2021,N
 GSOL,Global Sources Ltd.,NMS,Business Services,USA,5/12/2021,N,5/30/2021,5/30/2021,5/30/2021,N,N
-GPL,Great Panther Silver Limited,ASE,Silver,USA,5/31/2021,5/28/2021,5/28/2021,5/28/2021,5/28/2021,N,N
+GPL,Great Panther Silver Limited,ASE,Silver,USA,06/06/2021,06/06/2021,06/06/2021,06/06/2021,06/06/2021,N,N
 GNRC,Generac Holdings Inc.,NYQ,Diversified Machinery,USA,5/12/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,N
 GIGM,GigaMedia Limited,NCM,Multimedia & Graphics Software,USA,5/12/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,N
 WTM,White Mountains Insurance Group Ltd.,NYQ,Property & Casualty Insurance,USA,3/26/2021,5/29/2021,5/29/2021,5/29/2021,5/29/2021,5/29/2021,N
@@ -2832,7 +2832,7 @@ MA,Mastercard Incorporated,NYQ,Credit Services,USA,3/26/2021,5/29/2021,5/29/2021
 VRTX,Vertex Pharmaceuticals Incorporated,NMS,Biotechnology,USA,5/31/2021,5/29/2021,5/29/2021,5/29/2021,5/29/2021,5/29/2021,N
 P,Pandora Media Inc.,NYQ,Broadcasting - Radio,USA,5/11/2021,N,5/28/2021,5/28/2021,3/20/2021,N,N
 ZNGA,Zynga Inc.,NMS,Multimedia & Graphics Software,USA,5/12/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,N
-ROST,Ross Stores Inc.,NMS,Apparel Stores,USA,5/31/2021,5/28/2021,6/6/2021,5/28/2021,5/28/2021,5/28/2021,N
+ROST,Ross Stores Inc.,NMS,Apparel Stores,USA,06/06/2021,06/06/2021,06/06/2021,06/06/2021,06/06/2021,06/06/2021,N
 MDLZ,Mondelez International Inc.,NMS,Confectioners,USA,6/1/2021,5/29/2021,5/29/2021,5/29/2021,5/29/2021,5/29/2021,N
 JNPR,Juniper Networks Inc.,NYQ,Networking & Communication Devices,USA,5/12/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,N
 TMUS,T-Mobile US Inc.,NMS,Wireless Communications,USA,5/31/2021,5/28/2021,5/28/2021,5/28/2021,5/28/2021,5/28/2021,N
@@ -2846,7 +2846,7 @@ MCHP,Microchip Technology Incorporated,NMS,Semiconductor - Broad Line,USA,5/12/2
 XLNX,Xilinx Inc.,NMS,Semiconductor - Integrated Circuits,USA,5/12/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,N
 MXIM,Maxim Integrated Products Inc.,NMS,Semiconductor - Broad Line,USA,5/12/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,N
 MSI,Motorola Solutions Inc.,NYQ,Communication Equipment,USA,5/31/2021,5/28/2021,5/28/2021,5/28/2021,5/28/2021,5/28/2021,N
-URBN,Urban Outfitters Inc.,NMS,Apparel Stores,USA,5/31/2021,5/28/2021,6/6/2021,5/28/2021,5/28/2021,5/28/2021,N
+URBN,Urban Outfitters Inc.,NMS,Apparel Stores,USA,06/06/2021,06/06/2021,06/06/2021,06/06/2021,06/06/2021,06/06/2021,N
 SKX,Skechers U.S.A. Inc.,NYQ,Textile - Apparel Footwear & Accessories,USA,5/31/2021,5/28/2021,5/28/2021,5/28/2021,5/28/2021,5/28/2021,N
 NTAP,NetApp Inc.,NMS,Data Storage Devices,USA,5/12/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,N
 SHAK,Shake Shack Inc.,NYQ,Specialty Eateries,USA,5/31/2021,5/28/2021,5/28/2021,5/28/2021,5/28/2021,5/28/2021,N
@@ -2865,7 +2865,7 @@ WM,Waste Management Inc.,NYQ,Waste Management,USA,3/28/2021,5/30/2021,5/30/2021,
 SOHU,Sohu.com Inc.,NMS,Internet Information Providers,USA,5/31/2021,5/28/2021,5/28/2021,5/28/2021,5/28/2021,N,N
 NTES,NetEase Inc.,NMS,Internet Software & Services,USA,5/12/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,N,N
 ZIOP,ZIOPHARM Oncology Inc.,NCM,Biotechnology,USA,5/31/2021,5/29/2021,5/29/2021,5/29/2021,5/29/2021,5/29/2021,N
-JWN,Nordstrom Inc.,NYQ,Apparel Stores,USA,5/31/2021,5/28/2021,6/6/2021,5/28/2021,5/28/2021,5/28/2021,N
+JWN,Nordstrom Inc.,NYQ,Apparel Stores,USA,06/06/2021,06/06/2021,06/06/2021,06/06/2021,06/06/2021,06/06/2021,N
 ITW,Illinois Tool Works Inc.,NYQ,Diversified Machinery,USA,5/12/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,N,N
 YY,YY Inc.,NMS,Internet Information Providers,USA,5/31/2021,5/28/2021,5/28/2021,5/28/2021,5/28/2021,N,N
 VRSN,VeriSign Inc.,NMS,Internet Information Providers,USA,5/31/2021,5/28/2021,5/28/2021,5/28/2021,5/28/2021,5/28/2021,N
@@ -3744,7 +3744,7 @@ CPSH,CPS Technologies Corporation,NCM,Diversified Electronics,USA,5/12/2021,5/30
 UFPT,UFP Technologies Inc.,NCM,Packaging & Containers,USA,5/12/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,N
 TTMI,TTM Technologies Inc.,NMS,Printed Circuit Boards,USA,5/12/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,N
 TSRI,TSR Inc.,NCM,Business Software & Services,USA,5/12/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,N
-TLYS,Tilly s Inc.,NYQ,Apparel Stores,USA,5/31/2021,5/28/2021,6/6/2021,5/28/2021,5/28/2021,N,N
+TLYS,Tilly s Inc.,NYQ,Apparel Stores,USA,06/06/2021,06/06/2021,06/06/2021,06/06/2021,06/06/2021,N,N
 TESS,TESSCO Technologies Incorporated,NMS,Communication Equipment,USA,5/31/2021,5/28/2021,5/28/2021,5/28/2021,5/28/2021,5/28/2021,N
 TAIT,Taitron Components Incorporated,NCM,Electronics Wholesale,USA,5/31/2021,5/28/2021,5/28/2021,5/28/2021,5/28/2021,5/28/2021,N
 CNCG,Concierge Technologies Inc.,PNK,Networking & Communication Devices,USA,5/12/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,N,N
@@ -3795,7 +3795,7 @@ VGTL,VGTel Inc.,PNK,Networking & Communication Devices,USA,5/12/2021,5/30/2021,5
 VALV,Shengkai Innovations Inc.,PNK,Industrial Equipment Wholesale,USA,5/12/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,N,N
 LGYV,Legacy Ventures International Inc.,PNK,Property Management,USA,5/12/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,N,N
 VIZC,VizConnect Inc.,PNK,Marketing Services,USA,5/31/2021,5/28/2021,5/28/2021,5/28/2021,5/28/2021,N,N
-AIVN,American International Ventures Inc.,PNK,Gold,USA,06/06/2021,06/06/2021,06/06/2021,06/06/2021,N,N,N
+AIVN,American International Ventures Inc.,PNK,Gold,USA,06/06/2021,06/06/2021,06/06/2021,06/06/2021,06/06/2021,N,N
 VSMR,Verify Smart Corp.,PNK,Application Software,USA,5/12/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,N,N
 VRTT,Viatar CTC Solutions Inc.,PNK,Medical Laboratories & Research,USA,5/31/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,N,N
 VASO,Vaso Corporation,PNK,Medical Appliances & Equipment,USA,5/31/2021,5/29/2021,5/29/2021,5/29/2021,5/29/2021,N,N
@@ -4075,7 +4075,7 @@ TCNT,Toucan Interactive Corp.,PNK,Conglomerates,USA,5/12/2021,5/30/2021,5/30/202
 TSNI,TechniScan Inc.,PNK,Medical Appliances & Equipment,USA,5/31/2021,5/29/2021,5/29/2021,5/29/2021,5/29/2021,N,N
 VRCV,Varca Ventures Inc.,PNK,Industrial Metals & Minerals,USA,5/7/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,N,N
 WCYN,West Canyon Energy Corp.,PNK,Independent Oil & Gas,USA,6/2/2021,5/29/2021,5/29/2021,5/29/2021,5/29/2021,N,N
-CACH,Cache Inc.,PNK,Apparel Stores,USA,5/31/2021,5/28/2021,6/6/2021,5/28/2021,5/28/2021,N,N
+CACH,Cache Inc.,PNK,Apparel Stores,USA,06/06/2021,06/06/2021,06/06/2021,06/06/2021,06/06/2021,N,N
 INTX,Intersections Inc.,NGM,Consumer Services,USA,5/11/2021,N,5/28/2021,5/28/2021,5/28/2021,N,N
 INGN,Inogen Inc.,NMS,Medical Instruments & Supplies,USA,5/31/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,N
 INLX,Intellinetics Inc.,PNK,Application Software,USA,5/12/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,N
@@ -5257,7 +5257,7 @@ ALGM, Allegro MicroSystems Inc,NMS,Semiconductor - Broad Line,USA,N,5/30/2021,5/
 IMOS, ChipMOS TECHNOLOGIES INC,NMS,Semiconductor - Broad Line,USA,N,5/30/2021,5/30/2021,5/30/2021,5/30/2021,N,N
 ON, ON Semiconductor Corporation,NMS,Semiconductor - Broad Line,USA,N,5/30/2021,5/30/2021,5/30/2021,5/30/2021,5/30/2021,N
 SIMO, Silicon Motion Technology Corporation,NMS,Semiconductor - Broad Line,USA,N,5/30/2021,5/30/2021,5/30/2021,5/30/2021,N,N
-PAAS, Pan American Silver Corp,NMS,Silver,USA,5/31/2021,5/28/2021,5/28/2021,5/28/2021,5/28/2021,N,N
+PAAS, Pan American Silver Corp,NMS,Silver,USA,06/06/2021,06/06/2021,06/06/2021,06/06/2021,06/06/2021,N,N
 ACVA, ACV Auctions Inc,NMS,Application Software,USA,N,5/30/2021,5/30/2021,5/30/2021,5/30/2021,N,N
 ALKT, Alkami Technology Inc,NMS,Application Software,USA,N,5/30/2021,5/30/2021,5/30/2021,5/30/2021,N,N
 API, Agora Inc,NMS,Application Software,USA,N,5/30/2021,5/30/2021,5/30/2021,5/30/2021,N,N

@@ -27,6 +27,8 @@ class Decide:
             return CashFlowChanges(self.parent, self.subsector, self.data).lines()
         elif self.type == 'ratios':
             return Ratios(self.parent, self.subsector, self.data).lines()
+        else:
+            return ""
 
     def final(self):
         if self.type == 'ratios':

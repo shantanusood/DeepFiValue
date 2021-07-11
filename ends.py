@@ -195,6 +195,31 @@ def stocksBySector(country, parent, category):
             metadata_category = metadata_country[is_category]
             return "["+str(metadata_category.to_json(orient='records', lines=True).replace('}', '},'))[:-1].replace("'", "\"")+"]"
 
+@app.route('/data/getAllSubSectors')
+def getAllSubSectors():
+    if os.path.isfile('./data/tickers/Categories.csv'):
+        get_sub = pd.read_csv('./data/tickers/Categories.csv')
+        sub_lst = get_sub['Subsector'].drop_duplicates().to_list()
+        sub_lst.sort()
+        count = 0
+        for x in sub_lst:
+            is_sub = get_sub['Subsector'] == str(x)
+            parent = get_sub[is_sub]['ParentSector']
+            sub_lst[count] = str(x) + " :: " + str(parent.to_list()[0])
+            count = count + 1
+        return str(sub_lst).replace("'", "\"")
+    return "{'res': 'Error'}".replace("'", "\"")
+
+@app.route('/data/getParent/<sub>')
+def getParent(sub):
+    if os.path.isfile('./data/tickers/Categories.csv'):
+        get_sub = pd.read_csv('./data/tickers/Categories.csv')
+        is_sub = get_sub['Subsector'] == str(sub)
+        parent = get_sub[is_sub]['ParentSector'].to_list()[0]
+        parent_str = "{'parent': '"+str(parent)+"'}"
+        return parent_str.replace("'", "\"")
+    return "{'res': 'Error'}".replace("'", "\"")
+
 @app.route('/data/cik/<ticker>')
 def get_cik_ticker(ticker):
     return str(getCIK(ticker)).replace("'", "\"")
@@ -204,7 +229,17 @@ def get_cik_ticker(ticker):
 #####################################################################################################################
 @app.route('/data/get/<parent>/<subsector>/<ticker>/<type>')
 def data_get(parent, subsector, ticker, type):
-    filename = './data/sectors/' + str(parent).replace(" ", "_") + "/" + subsector + '.json'
+    filename = ""
+    if "Customs" not in str(parent):
+        filename = './data/sectors/' + str(parent).replace(" ", "_") + "/" + subsector + '.json'
+    else:
+        if os.path.isfile('./data/tickers/Categories.csv'):
+            get_sub = pd.read_csv('./data/tickers/Categories.csv')
+        isSub = get_sub['Subsector'] == str(subsector)
+        subSect = get_sub[isSub]
+        parent = subSect['ParentSector'].to_list()[0]
+        filename = './data/sectors/' + str(parent).replace(" ", "_") + "/" + subsector + '.json'
+
     getData = {}
     data = []
     try:
@@ -465,6 +500,47 @@ def data_sync_indicators(parent, subsector, type):
     except:
         traceback.print_exc()
         return str("{'res': 'ERROR: Data sync dump failed for: " + parent + " > " + subsector + " > " + type + "'}").replace("'", "\"")
+
+@app.route('/data/sync/move/<ticker>/<newsubsector>', methods=["GET", "POST"])
+def move_category(newsubsector, ticker):
+    newsubsector = str(str(newsubsector).split(" :: ")[0])
+    with open('./data/tickers/Stocks.csv', 'r') as in_file:
+        r_row = list(csv.reader(in_file))
+    with open('./data/tickers/Stocks.csv', 'w', newline='') as out_file:
+        writer = csv.writer(out_file)
+        for row in r_row:
+            if row[0] == ticker:
+                row[3] = str(newsubsector)
+            if row:
+                writer.writerow(row)
+        return "{'res': 'Done'}".replace("'", "\"")
+
+    raise Exception("Error occured while moving".replace("'", "\""))
+
+@app.route('/data/sync/links/<ticker>/<dowhat>', methods=["GET", "POST"])
+def links(ticker, dowhat):
+    link_mod = request.json
+    isPresent = False
+    try:
+        with open("./data/tickers/Links.json", 'r') as data_file:
+            data = json.loads(data_file.read())
+            for x in data:
+                tick_lst = list(data[x])
+                if str(x) == str(ticker):
+                    isPresent = True
+                    if str(dowhat) == "add":
+                        tick_lst.append(link_mod['link'])
+                    elif str(dowhat) == "remove":
+                        tick_lst.remove(link_mod['link'])
+                    data[x] = tick_lst
+        if not isPresent and str(dowhat) == "add":
+            data[ticker] = [list(link_mod['link'])]
+        with open("./data/tickers/Links.json", 'w') as data_file:
+            data_file.write(str(data).replace("'", "\""))
+
+        return str(data).replace("'", "\"")
+    except:
+        raise Exception("Something went wrong adding link")
 
 #####################################################################################################################
 ################################################# HELPER FUNCTIONS ##################################################
